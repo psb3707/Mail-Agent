@@ -4,9 +4,7 @@
 
 사내 해커톤 출품작. 설계 문서는 `docs/specs/2026-09-09-mail-agent-design.md`.
 
-## 현재 상태 — 사전 준비(데이터) 완료, 애플리케이션 미착수
-
-해커톤 규정상 사전 코딩 허용 범위가 확인되지 않아 **데이터까지만** 만들어 둔 상태다.
+## 현재 상태 — PoC 구현 완료, 시연 리허설 진행 중
 
 | 산출물 | 상태 |
 |---|---|
@@ -15,9 +13,9 @@
 | `data/DESIGN.md` | ✅ 말투 계승 규칙, 건 구성, 시연 정답 세트 |
 | `scripts/generate_data.py` | ✅ 재현 가능 (seed 고정) |
 | `scripts/generate_attachments.py` | ✅ |
-| `scripts/build_index.py` | ✅ 사전 계산 완료 (`indexed.json` 생성) |
-| `tests/test_build_index.py` | ✅ index 무결성 · 순서 무관 재현 테스트 |
-| `app/` (FastAPI 단일 페이지) | ⬜ 당일 |
+| `scripts/build_index.py` | ✅ 9건/43통 재조립 · 비건 357통 · `indexed.json` 생성 |
+| `tests/test_build_index.py` | ✅ 정합성 · 라벨 비의존 · 순서 무관 · 멱등 · 최신본 검증 |
+| `app/` (FastAPI 단일 페이지) | ✅ 재조립·질의·버전·신메일 분류 라우트 구현 |
 
 ## 데이터 재생성
 
@@ -91,7 +89,7 @@ python3 -m venv .venv && ./.venv/bin/pip install -e .
 
 | 도구 | 역할 | 비유 |
 |---|---|---|
-| FastAPI + uvicorn | 웹 서버, 라우트 3개 (`/`, `/ask`, `/versions`) | 접수 창구 |
+| FastAPI + uvicorn | 웹 서버, 라우트 4개 (`/`, `/ask`, `/classify`, `/versions`) | 접수 창구 |
 | Jinja2 | 단일 페이지 템플릿에 데이터 끼워 넣기 | 화면 골격 + 실데이터 |
 | 인메모리 저장 | 동적 구조는 세션 전용 (영속화 비범위) | 데모용 휘발 기록 |
 

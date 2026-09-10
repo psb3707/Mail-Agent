@@ -26,18 +26,17 @@
 | 가상 메일 | `data/mails.json` | ✅ 400통 · 9종 건 라벨 · 첨부 16개 (불변) |
 | 가상 첨부 | `data/attachments/` | ✅ 실제 PDF·XLSX 16개 |
 | 설계 | `docs/specs/2026-09-09-mail-agent-design.md` | ✅ 설계·4장면 시나리오 |
-| 색인 파이프라인 | `scripts/build_index.py` | ✅ 건 그룹핑·첨부 추출·버전 판별 → `indexed.json` |
-| 색인 테스트 | `tests/test_build_index.py` | ⚠️ 3/4 통과 — **1건 실패 (아래 §5)** |
+| 색인 파이프라인 | `scripts/build_index.py` | ✅ 9건(43통) 재조립 · 비건 357통 · 첨부 추출 · 버전 판별 |
+| 색인 테스트 | `tests/test_build_index.py` | ✅ 8/8 — 전체 건 정합성·정답 라벨 비의존·순서 무관·멱등 |
 | 재조립 | `app/grouping.py` | ✅ 재조립 + 신메일 증분 편입 (테스트 3/3 통과) |
 | 자연어 질의 | `app/search.py` | ✅ 후보 축소 + 근거 인용 (테스트 3/3 통과) |
 | LLM 게이트웨이 | `app/llm.py` | ✅ 라이브 호출 + 캐시 폴백 (테스트 2/2 통과) |
-| 버전 판별 | `app/versions.py` | ⬜ **미작성** (D1-5) |
-| 웹 서빙 | `app/main.py` + `templates/` | ⬜ **미작성** (D1-6) |
-| 폴백 캐시 | `data/demo_cache.json` | ⬜ 미생성 (D1-7) |
-| 발표 자산 | `slides/` | ⬜ 미작성 (D1-7) |
+| 버전 판별 | `app/versions.py` | ✅ 최신본 + 변경 근거 (테스트 4/4 통과) |
+| 웹 서빙 | `app/main.py` + `templates/` | ✅ `/`·`/ask`·`/classify`·`/versions` 스모크 검증 |
+| 폴백 캐시 | `data/demo_cache.json` | ✅ 생성 |
+| 발표 자산 | `slides/` | ⚠️ 발표 뼈대 생성, 리허설 남음 |
 
-**테스트 현황**: `pytest tests -v` → **11 passed, 1 failed**
-(실패: `test_build_index_creates_cases` — m0005·m0006이 토큰 없어 n cx 건에 미편입)
+**테스트 현황**: `pytest tests -v` → **31 passed**
 
 ---
 
@@ -72,27 +71,18 @@
 
 ## 5. 다음에 할 일 (우선순위순)
 
-### 5-1. 실패 테스트부터 고친다 (가장 먼저)
-**문제**: `tests/test_build_index.py::test_build_index_creates_cases` 실패
-- 기대: 건 A가 m0001~m0006 6통을 포함
-- 실제: `{m0001..m0004}`만 포함 — **m0005·m0006은 토큰이 없어 편입 안 됨**
-- 원인 분석: `build_index.py`는 `_project_token(subject)`로만 초기 군집 형성. m0005(`FW: 견적 관련 문의드립니다`)·m0006은 제목에 `n cx` 패턴이 없음.
-- `handoff.md` D1-1의 "미커밋 개선" 노트: `_TOKENLESS_KEYWORDS`(제목 키워드 교집합 편입)가 이미 코드에 있음 — **이 로직을 초기 군집 단계에도 적용**해야 함.
-- 확인: `.venv\Scripts\python.exe -m pytest tests/test_build_index.py -v`
+### 5-1. 색인 안정화 — ✅
+- 회신 그래프를 뼈대로 9개 건을 만들고, 표기 정규화·업무 생애주기·시간 근접성으로 끊긴 메일을 보완한다.
+- 일반 메일이 대표어를 오염시켜 오분류가 연쇄 증폭되지 않도록 확장 전 대표어를 고정한다.
+- `N_CX` 6통, `Next W` 4통을 포함한 사안 메일 43통과 비건 메일 357통이 정답 세트와 일치한다.
+- `_case`는 평가 테스트에서만 사용하며, 제거한 입력에서도 동일한 결과가 나오는 테스트가 있다.
 
-### 5-2. D1-5 버전 판별 (`app/versions.py`) — ⬜
-- 같은 문서 버전 계열(`version_groups[]`)에서 최신본 + 달라진 항목 요약
-- LLM 호출이 기본(`app/llm.py`의 `llm_call`), 실패 시 폴백
-- 완료 조건: 버전 그룹에서 최신본을 골라 "달라진 것"(단가·일자·업체)를 설명하는 테스트 통과
+### 5-2. D1-7 발표·리허설 마무리 — ⚠️
+- `slides/발표-뼈대.md`를 실제 발표 자료로 다듬고 4장면을 오프라인 폴백에서도 리허설한다.
+- 대본 밖 예비 질문 3개와 필수교육 질문의 답 품질을 확인한다.
 
-### 5-3. D1-6 웹 서빙 (`app/main.py` + `templates/index.html`) — ⬜
-- FastAPI 라우트 3개: `/`, `/ask`, `/versions`
-- Jinja2 단일 페이지: 도착순↔건 단위 토글, 건 카드(타임라인+첨부), 질문창, 비건 섹션
-- 완료 조건: `uvicorn app.main:app` 기동 → `/`에서 카드·토글·질문·버전 표 확인
-
-### 5-4. D1-7 시연 자산 (`demo_cache.json` + `slides/`) — ⬜
-- 폴백용 사전 계산 답변(정답 2건)을 `data/demo_cache.json`으로 생성
-- 4장면 발표 자료 + 리허설
+### 5-3. 문서 상태 동기화 — ✅
+- `README.md`·개발/QA 온보딩·`handoff.md`·데이터 스키마의 오래된 상태와 수치를 실제 구현에 맞췄다.
 
 ---
 
@@ -104,7 +94,7 @@
 | 테스트 | 덩어리 완료 시 `tests/test_*.py` **PASS 확인 후 커밋** |
 | 상태 갱신 | 완료 덩어리는 `handoff.md` 체크 표시(✅/⬜)를 최신화 |
 | 원본 | `data/mails.json`·`data/attachments/`는 커밋 금지 대상이 아니라 **수정 금지** |
-| 미커밋 | 워킹 디렉토리에 미커밋 변경이 있으면(현재: `app/`, `tests/`, `indexed.json`) 어느 쪽 먼저든 ESG… 아니라 **먼저 원인 파악 후 함께 정리** |
+| 미커밋 | 워킹 디렉토리에 변경이 있으면 **먼저 원인과 소유자를 파악한 뒤** 관련 변경만 함께 정리 |
 
 ---
 

@@ -34,18 +34,17 @@
 
 | 영역 | 상태 |
 |---|---|
-| 색인 `scripts/build_index.py` | ✅ (테스트 3/4 — **1건 실패**) |
+| 색인 `scripts/build_index.py` | ✅ 9건/43통 · 비건 357통 (테스트 8/8) |
 | 재조립 `app/grouping.py` | ✅ 테스트 3/3 |
 | 질의 `app/search.py` | ✅ 테스트 3/3 |
 | LLM 게이트웨이 `app/llm.py` | ✅ 테스트 2/2 |
-| 버전 `app/versions.py` | ⬜ 미작성 (D1-5) |
-| 웹 서빙 `app/main.py`+`templates/` | ⬜ 미작성 (D1-6) |
-| 시연 자산(`demo_cache.json`·`slides/`) | ⬜ 미작성 (D1-7) |
+| 버전 `app/versions.py` | ✅ 테스트 4/4 |
+| 웹 서빙 `app/main.py`+`templates/` | ✅ 스모크 검증 |
+| 시연 자산(`demo_cache.json`·`slides/`) | ⚠️ 캐시·발표 뼈대 생성, 리허설 남음 |
 
-**현재 테스트**: `pytest tests -v` → **11 passed, 1 failed**
-- 실패: `test_build_index_creates_cases` — 건 A(m0001~m0006) 기대,
-  m0005·m0006이 제목 토큰 없어 미편입
-- 수리 방향(개발자 문서 §5-1): `_TOKENLESS_KEYWORDS`를 초기 군집 단계에 적용
+**현재 테스트**: `pytest tests -v` → **31 passed**
+- 색인은 `_case` 라벨을 제거한 입력에서도 같은 9개 건을 만든다.
+- 입력 순서 무관·전체 결과 멱등·첨부 순서와 무관한 최신본 판별을 검증한다.
 
 ---
 
