@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>mail-agent — 건 단위 메일함</title>
+  <style>
+    :root {
+      --border: #d9d9d9;
+      --muted: #6b7280;
+      --accent: #1f5fa8;
+      --card-bg: #ffffff;
+      --bg: #f5f6f8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      max-width: 1040px; margin: 0 auto; padding: 1.5rem 1rem;
+      color: #1f2937;
+    }
+    header h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
+    .sub { color: var(--muted); font-size: .92rem; margin: .25rem 0 1.25rem; }
+
+    .toggle { display: flex; gap: .5rem; margin-bottom: 1.25rem; }
+    .toggle button {
+      padding: .55rem 1.1rem; border: 1px solid var(--border); background: #fff;
+      border-radius: 8px; cursor: pointer; font-weight: 600;
+    }
+    .toggle button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* 도착순 */
+    .arrival-list { max-height: 320px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; }
+    .arrival-row { display: grid; grid-template-columns: 96px 11rem 1fr; gap: .4rem; padding: .45rem .7rem; font-size: .86rem; }
+    .arrival-row:nth-child(odd) { background: #f0f2f5; }
+    .arrival-row .at { color: var(--muted); }
+
+    /* 건 카드 */
+    .card { border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; margin: .7rem 0; background: var(--card-bg); }
+    .card h3 { margin: 0 0 .35rem; font-size: 1.02rem; }
+    .card .meta { color: var(--muted); font-size: .88rem; margin: 0 0 .5rem; }
+    .latest { background: #eef4fb; border-left: 3px solid var(--accent); padding: .5rem .75rem; border-radius: 6px; font-size: .9rem; }
+    .latest b { color: var(--accent); }
+    .timeline { margin: .4rem 0 .6rem; padding-left: 1rem; font-size: .85rem; }
+    .timeline .mail { padding: .18rem 0; color: #374151; }
+    .attachments { font-size: .85rem; }
+    .attachments .file { font-family: "Consolas", monospace; color: #0b5394; }
+
+    /* 질문창 */
+    .ask { border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; margin: 1.4rem 0; background: var(--card-bg); }
+    .ask input { width: 72%; padding: .55rem .7rem; border: 1px solid var(--border); border-radius: 6px; }
+    .ask button { padding: .55rem 1.1rem; background: var(--accent); color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+    #answer { border: 1px solid var(--border); border-radius: 8px; padding: .8rem 1rem; min-height: 3.5rem; white-space: pre-wrap; background: #fafbfc; }
+    #answer .cached-badge { color: #b3561f; font-weight: 600; }
+    .evidence { font-size: .85rem; color: #374151; margin: .4rem 0 0; }
+    .evidence li { list-style: disc; margin: .15rem 0; }
+
+    /* 버전 표 */
+    table { border-collapse: collapse; width: 100%; background: var(--card-bg); }
+    th, td { border: 1px solid var(--border); padding: .55rem .7rem; text-align: left; font-size: .88rem; vertical-align: top; }
+    th { background: #eef1f5; }
+
+    /* 비건 */
+    .noncase { border: 1px solid var(--border); border-radius: 10px; padding: .9rem 1.1rem; margin: .7rem 0; }
+    .noncase summary { cursor: pointer; font-weight: 600; }
+    .noncase .item { font-size: .84rem; color: #374151; padding: .25rem 0; }
+
+    /* 신메일 분류 시연 */
+    .classify-demo { display: flex; gap: .5rem; margin: .75rem 0; }
+    .classify-demo input { flex: 1; padding: .5rem .7rem; border: 1px solid var(--border); border-radius: 6px; }
+    #classify-result { font-size: .88rem; margin: .4rem 0 0; }
+
+    footer { margin-top: 2rem; color: var(--muted); font-size: .8rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>메일함 — 건 단위 보기</h1>
+    <p class="sub">메일은 통으로 오지만, 일은 건으로 돕니다. · mail-agent PoC</p>
+  </header>
+
+  <div class="toggle">
+    <button id="btn-arrival">도착순</button>
+    <button id="btn-case" class="active">건 단위</button>
+  </div>
+
+  <div id="arrival-view" style="display:none">
+    <h2>도착순 메일함</h2>
+    <div class="arrival-list" id="arrival-list"></div>
+  </div>
+
+  <div id="case-view">
+    <h2>건 카드 ({% if cards|length > 0 %}{{ cards|length }}{% else %}0{% endif %}건)</h2>
+
+    {% if cards %}
+      {% for card in cards %}
+      <div class="card">
+        <h3>{{ card.title }} <small style="color:var(--muted)">({{ card.period[0] if card.period else '' }} ~ {{ card.period[1] if card.period else '' }})</small></h3>
+        <p class="meta">{{ card.mail_type }} · 메일 {{ card.mails|length }}통 · 첨부 {{ card.attachments|length }}개</p>
+        {% if card.latest_body %}
+        <div class="latest">최신 답변 (<b>{{ card.latest_sender }}</b>, {{ card.latest_at[:10] if card.latest_at else '' }}) — {{ card.latest_body }}</div>
+        {% endif %}
+        <h4 style="margin:.5rem 0 .3rem">타임라인</h4>
+        <div class="timeline">
+          {% for m in card.mails %}
+          <div class="mail">{{ m.sent_at[:10] }} · {{ m.sender_name }} — {{ m.subject }}</div>
+          {% endfor %}
+        </div>
+        {% if card.attachments %}
+        <div class="attachments">첨부: {% for a in card.attachments %}<span class="file">{{ a }}</span>{% if not loop.last %} · {% endif %}{% endfor %}</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>건 카드가 없습니다.</p>
+    {% endif %}
+  </div>
+
+  <div class="ask">
+    <h2>질문하기 (장면 3)</h2>
+    <p class="sub" style="margin:.2rem 0 .6rem">문서 속 실제 값을 근거로 답합니다.</p>
+    <input id="q" placeholder="예: N_CX 외주 견적 최종 얼마였지?" value="" autocomplete="off">
+    <button id="ask-btn">질문</button>
+    <div id="answer">답변이 여기에 표시됩니다.</div>
+  </div>
+
+  <h2>버전 판별 (장면 4)</h2>
+  <table>
+    <tr><th>문서</th><th>버전 (첨부 id)</th><th>최신</th><th>달라진 항목</th></tr>
+    {% if version_rows %}
+      {% for v in version_rows %}
+      <tr>
+        <td>{{ v.doc }}</td>
+        <td>{{ v.ids | join(', ') }}</td>
+        <td><b>{{ v.latest }}</b></td>
+        <td>{{ v.diff_summary }}</td>
+      </tr>
+      {% endfor %}
+    {% else %}
+      <tr><td colspan="4" style="text-align:center;color:var(--muted)">버전 계열이 없습니다.</td></tr>
+    {% endif %}
+  </table>
+
+  <div class="noncase">
+    <details>
+      <summary>알림 ({% if alerts|length > 0 %}{{ alerts|length }}{% else %}0{% endif %}통 · 반복 알림 접기)</summary>
+      {% if alerts %}
+        {% for a in alerts %}<div class="item">{{ a.subject }}</div>{% endfor %}
+      {% else %}<div class="item">없음</div>{% endif %}
+    </details>
+  </div>
+  <div class="noncase">
+    <details>
+      <summary>기타 ({% if misc|length > 0 %}{{ misc|length }}{% else %}0{% endif %}통 · 단발성 공지·행정)</summary>
+      {% if misc %}
+        {% for m in misc %}<div class="item">{{ m.subject }}</div>{% endfor %}
+      {% else %}<div class="item">없음</div>{% endif %}
+    </details>
+  </div>
+
+  <div class="ask">
+    <h2>신메일 분류 시연 (증분 편입)</h2>
+    <p class="sub" style="margin:.2rem 0 .6rem">새로 도착한 메일 1통이 어느 건으로 들어가는지 판단합니다 (라이브 LLM, 실패 시 폴백).</p>
+    <div class="classify-demo">
+      <input id="newmail-subj" placeholder="신메일 제목 (예: 〔Project N_CX〕2차 견적 요청)" value="">
+      <button id="classify-btn">분류</button>
+    </div>
+    <div id="classify-result">분류 결과가 여기에 표시됩니다.</div>
+  </div>
+
+  <footer>mail-agent PoC · 원본 메일함 무수정 · 인메모리 시연</footer>
+
+  <script>
+    const byId = (id) => document.getElementById(id);
+    const arrivalView = byId('arrival-view'), caseView = byId('case-view');
+    const btnArrival = byId('btn-arrival'), btnCase = byId('btn-case');
+
+    function setView(name) {
+      const arrival = name === 'arrival';
+      arrivalView.style.display = arrival ? 'block' : 'none';
+      caseView.style.display = arrival ? 'none' : 'block';
+      btnArrival.classList.toggle('active', arrival);
+      btnCase.classList.toggle('active', !arrival);
+    }
+    btnArrival.onclick = () => setView('arrival');
+    btnCase.onclick = () => setView('case');
+
+    // 도착순 목록 — 서버가 주는 400통을 직접 렌더링하지 않고, 최신 60통을 JS로 요청하지 않는다.
+    // (PoC: 도착순은 건 단위 대비용이므로 텍스트 안내로 대체)
+    arrivalView.querySelector('.arrival-list').innerHTML =
+      '<div class="arrival-row" style="grid-template-columns:1fr"><span style="color:var(--muted)">도착순 메일함은 \'검색이 안 되는\' 문제를 보여주는 대비 화면입니다 (데모 스토리상 축약). 건 단위 보기를 사용하세요.</span></div>';
+
+    // 질문하기
+    byId('ask-btn').onclick = async () => {
+      const q = byId('q').value.trim();
+      if (!q) return;
+      const answerBox = byId('answer');
+      answerBox.textContent = '질문 처리 중...';
+      try {
+        const r = await fetch('/ask', {
+          method: 'POST', headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({question: q})
+        }).then(x => x.json());
+        let html = '';
+        if (r.cached) html += '<span class="cached-badge">(폴백 캐시) </span>';
+        html += esc(r.answer || '');
+        if (r.attachment) html += '\n\n[첨부] ' + esc(r.attachment);
+        if (r.evidence && r.evidence.length) {
+          html += '\n\n<em>근거 (문서 속 실제 값):</em>\n<ul class="evidence">';
+          r.evidence.forEach(e => { html += '<li>' + esc(e) + '</li>'; });
+          html += '</ul>';
+        }
+        answerBox.innerHTML = html;
+      } catch (e) {
+        answerBox.textContent = '오류: ' + e.message;
+      }
+    };
+    byId('q').addEventListener('keydown', e => { if (e.key === 'Enter') byId('ask-btn').onclick(); });
+
+    // 신메일 분류 시연
+    byId('classify-btn').onclick = async () => {
+      const subj = byId('newmail-subj').value.trim();
+      if (!subj) return;
+      const box = byId('classify-result');
+      box.textContent = '분류 중...';
+      try {
+        const r = await fetch('/classify', {
+          method: 'POST', headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({new_mail: {id: 'm9999', subject: subj, body: '추가 요청드립니다.', sender_dept: '디지털전략팀'}})
+        }).then(x => x.json());
+        box.innerHTML = '배정: <b>' + esc(r.case_id) + '</b>' + (r.case_id === 'NEW_CASE' ? ' (새 건 시작)' : ' (기존 건 편입)');
+      } catch (e) {
+        box.textContent = '오류: ' + e.message;
+      }
+    };
+
+    function esc(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+  </script>
+</body>
+</html>
