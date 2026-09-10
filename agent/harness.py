@@ -49,7 +49,23 @@ class ToolHarness:
         """이름으로 스킬을 찾아 실행한다. 없는 스킬이면 KeyError를 일으킨다."""
         if name not in self._skills:
             raise KeyError(f"등록되지 않은 스킬: {name!r}. 사용 가능: {sorted(self._skills)}")
-        return self._skills[name].execute(arguments or {})
+        args = {} if arguments is None else arguments
+        if not isinstance(args, dict):
+            raise ValueError("도구 인자는 JSON 객체여야 합니다.")
+        skill = self._skills[name]
+        schema = skill.parameters
+        properties = schema.get("properties", {})
+        for required in schema.get("required", []):
+            if required not in args:
+                raise ValueError(f"필수 인자가 없습니다: {required}")
+        for key, value in args.items():
+            if key not in properties:
+                if schema.get("additionalProperties") is False:
+                    raise ValueError(f"허용하지 않는 인자: {key}")
+                continue
+            if properties[key].get("type") == "string" and (not isinstance(value, str) or not value.strip()):
+                raise ValueError(f"{key}에는 비어 있지 않은 문자열이 필요합니다.")
+        return skill.execute(args)
 
     def has(self, name: str) -> bool:
         """스킬 등록 여부 확인."""

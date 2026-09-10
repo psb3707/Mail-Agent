@@ -7,10 +7,11 @@ dependencies = [
     "fastapi>=0.115",
     "uvicorn[standard]>=0.32",
     "jinja2>=3.1",
+    "markdown-it-py>=3.0,<5",
     "pypdf>=5.0",
     "openpyxl>=3.1",
     "reportlab>=4.2",
 ]
 
 [tool.setuptools]
-packages = ["app"]
+packages = ["app", "agent"]

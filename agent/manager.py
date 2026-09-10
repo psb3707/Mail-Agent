@@ -12,7 +12,7 @@ from agent.classifier_adapter import ClassifierAdapter
 from agent.context import ConversationContext
 from agent.harness import ToolHarness
 from agent.orchestrator import Orchestrator
-from agent.skills import default_skills
+from agent.skills import default_skills, mailbox_skills
 
 # LLM 규약 (app/llm과 동일): callable(prompt: str, cache_key: str = "") -> str
 LlmCall = Callable[..., str]
@@ -27,13 +27,14 @@ class ManagerAgent:
         context: ConversationContext | None = None,
         llm_call: LlmCall | None = None,
         max_steps: int = 4,
+        indexed: dict | None = None,
     ):
         self.classifier = classifier or ClassifierAdapter()
         self.context = context or ConversationContext()
         # 라이브 LLM이 기본 — 없으면(골격 단계) 규칙 폴백으로 동작
         self.llm_call = llm_call
         # 지시-009 하네스: 분류AI 어댑터에 연결된 기본 스킬 4개 등록
-        self.harness = ToolHarness(default_skills(self.classifier))
+        self.harness = ToolHarness(mailbox_skills(indexed, llm_call) if indexed is not None else default_skills(self.classifier))
         self.orchestrator = Orchestrator(
             harness=self.harness,
             llm_call=self.llm_call,
@@ -45,5 +46,10 @@ class ManagerAgent:
         """에이전트 루프 실행 → 최종 응답 문자열 (하위 호환 인터페이스 유지)."""
         return self.orchestrator.run(message)
 
-
-# (지시-010) 기존 1턴 루프·직접 도구 호출·키워드 라우팅은 Orchestrator(또는 규칙 폴백)로 이동
+    def run_result(self, message: str) -> dict:
+        """Structured answer metadata for the web app; context is request-local."""
+        answer = self.run(message)
+        return {"attachment": None, "evidence": [], "mail_ids": [],
+                "cached": False,
+                "fallback": self.orchestrator.used_fallback and not bool(self.orchestrator.response),
+                **self.orchestrator.response, "answer": answer}

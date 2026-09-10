@@ -15,15 +15,15 @@ def render_tool_result(tool: str, result: Any) -> str:
     """
     if tool == "tree":
         cases = result.get("cases", []) if isinstance(result, dict) else []
-        titles = " / ".join(c.get("title", c.get("id", "?")) for c in cases[:5])
-        return f"분류된 건: {titles}" if titles else "분류된 건이 없습니다."
+        titles = "\n".join("- **" + c.get("title", c.get("id", "?")) + "**" for c in cases)
+        return f"지금 메일함에는 **{len(cases)}건의 업무**가 모여 있어요.\n\n## 업무 모아보기\n\n{titles}" if titles else "아직 모아 둔 업무가 없어요."
     if tool == "case_emails":
         if not result:
-            return "해당 건에 메일이 없습니다."
+            return "이 업무에는 아직 확인할 메일이 없어요."
         lines = [f"- {m.get('sent_at', '')[:10]} {m.get('subject', '')}" for m in result]
-        return "건 타임라인:\n" + "\n".join(lines)
+        return "업무의 흐름을 시간순으로 모았어요.\n\n## 메일 타임라인\n\n" + "\n".join(lines)
     if tool == "attachment_text":
-        return f"첨부 내용: {result}" if result else "첨부 내용이 없습니다."
+        return f"확인한 첨부 내용이에요.\n\n{result}" if result else "첨부에서 읽을 수 있는 내용을 찾지 못했어요."
     if tool == "reply":
         return str(result)
     return str(result)

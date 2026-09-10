@@ -15,7 +15,9 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 
-from app import grouping, llm, search, versions
+from app import grouping, llm, versions
+from app.answer_format import format_answer
+from agent.manager import ManagerAgent
 
 BASE = Path(__file__).resolve().parent
 DATA = BASE.parent / "data"
@@ -62,15 +64,15 @@ async def index(request: Request):
 
 
 @app.post("/ask")
-async def ask(payload: dict):
+def ask(payload: dict):
     question = (payload.get("question") or "").strip()
     if not question:
         return JSONResponse(
             {"answer": "질문을 입력해 주세요.", "attachment": None,
              "evidence": [], "mail_ids": [], "cached": False}
         )
-    result = search.answer_question(question, state["indexed"], llm.llm_call)
-    return JSONResponse(result)
+    result = ManagerAgent(indexed=state["indexed"], llm_call=llm.llm_call).run_result(question)
+    return JSONResponse(format_answer(result))
 
 
 @app.post("/classify")

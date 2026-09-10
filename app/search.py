@@ -3,7 +3,10 @@
 라이브 LLM 호출이 기본. 실패 시 인메모리 폴백(사전 계산 정답)으로 처리.
 """
 import json
+import re
 from pathlib import Path
+
+from agent.prompts import RESPONSE_STYLE
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 
@@ -51,7 +54,7 @@ def _keyword_candidates(question: str, corpus: list[dict], top_k: int = 6) -> li
         if score > 0:
             scored.append((score, item))
     scored.sort(key=lambda x: -x[0])
-    return [s[1] for s in scored][:top_k] or corpus[:top_k]
+    return [s[1] for s in scored][:top_k]
 
 
 def _fallback(question: str) -> dict:
@@ -119,17 +122,64 @@ def _find_attachment_in_answer(answer: str, corpus: list[dict]) -> dict | None:
     return None
 
 
+
+_RESPONSE_STYLE = RESPONSE_STYLE + "\n"
+
+
+def _is_recent_summary(question: str) -> bool:
+    return bool(re.fullmatch(
+        r"\s*(?:최근|최신)\s*(?:받은\s*)?(?:메일|이메일)(?:함)?(?:을|들|들을)?\s*"
+        r"(?:좀\s*)?(?:요약|정리)(?:해봐|해줘|해 줘|해 줘요|해주세요|해 주세요|해|해줘요)?[.!?~ ]*",
+        question,
+    ))
+
+
+def _recent_summary(indexed: dict, llm_call) -> dict:
+    """Use sent_at, never attachment order, as the source of recency."""
+    mails = indexed.get("mails")
+    if mails is None:
+        mails = json.loads((DATA / "mails.json").read_text(encoding="utf-8"))["mails"]
+    recent = sorted(mails, key=lambda m: (m.get("sent_at", ""), m.get("id", "")), reverse=True)[:12]
+    if not recent:
+        return {"answer": "요약할 메일이 없습니다.", "attachment": None,
+                "evidence": [], "mail_ids": [], "cached": False, "kind": "mail_summary"}
+    sources = [{"id": m["id"], "subject": m.get("subject", ""),
+                "sender": m.get("sender_name", ""), "date": m.get("sent_at", "")[:10],
+                "excerpt": m.get("body", "")[:240]} for m in recent]
+    scope = f"메일함 최신 {len(recent)}통 · {sources[-1]['date']} – {sources[0]['date']}"
+    prompt = (_RESPONSE_STYLE + "최근 메일 요약 요청이다. 아래 수신 시각 기준 최신 메일만 요약하라. "
+              "첨부 정답을 하나 고르는 작업이 아니다. 알림과 업무 내용을 구분하고, "
+              "메일 수신일과 본문에 언급된 일정 날짜를 혼동하지 마라. "
+              "이 범위 밖 메일함 전체에 대한 결론을 내리지 마라.\n"
+              + scope + "\n" + json.dumps(sources, ensure_ascii=False))
+    cached = False
+    try:
+        answer = llm_call(prompt)
+    except Exception:
+        cached = True
+        answer = ("AI 요약을 일시적으로 사용할 수 없어 최신 메일의 제목을 모았습니다.\n\n"
+                  "## 최근 도착한 메일\n" + "\n".join(
+                      f"- **{m['date']} · {m['sender']}** — {m['subject']}" for m in sources))
+    return {"answer": answer, "attachment": None, "evidence": [],
+            "mail_ids": [m["id"] for m in recent], "cached": cached,
+            "kind": "mail_summary", "scope": scope, "sources": sources}
+
 def answer_question(question: str, indexed: dict, llm_call) -> dict:
     """자연어 질문 → 정답 첨부 + '왜 이것인가' 근거 (장면 3)."""
+    if _is_recent_summary(question):
+        return _recent_summary(indexed, llm_call)
     corpus = _corpus(indexed)
     cands = _keyword_candidates(question, corpus)
+    if not cands:
+        return {"answer": "관련 문서를 찾지 못했어요. 업무 이름이나 찾는 내용을 조금 더 알려주실래요?",
+                "attachment": None, "evidence": [], "mail_ids": [], "cached": False}
 
     prompt = (
-        "메일함 사안 질문에 답하라. 후보 첨부 중 가장 그럴듯한 1개를 고르고, "
+        _RESPONSE_STYLE + "메일함 사안 질문에 답하라. 질문에 직접 관련된 후보 첨부가 있을 때만 선택하고, "
         "문서 안의 실제 값(금액·일자·버전·업체)을 근거로 제시하라. "
-        "'왜 이것인가'를 반드시 포함하라.\n"
+        "관련 근거가 없으면 확인할 수 없다고 답하라.\n"
         f"질문: {question}\n"
-        + "\n".join(f"- [{c['file']}] ({c['case']}): {c['text'][:500]}" for c in cands)
+        + "\n".join(f"- [{c['file']}] ({c['case']}): {c['text'][:6000]}" for c in cands)
         + "\n답변:"
     )
     try:

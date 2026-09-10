@@ -62,7 +62,7 @@ def default_skills(classifier) -> list[Skill]:
                 "'c-m0001 건의 메일들 알려줘', '그 건 타임라인 봐줘' 같은 요청에 쓴다. "
                 "인자: case_id (필수, 예: 'c-m0001')."
             ),
-            handler=lambda args: classifier.get_case_emails(args.get("case_id", "c-m0001")),
+            handler=lambda args: classifier.get_case_emails(args["case_id"]),
             parameters={
                 "type": "object",
                 "properties": {
@@ -81,7 +81,7 @@ def default_skills(classifier) -> list[Skill]:
                 "'a001 첨부 내용 알려줘', '견적서 본문 봐줘' 같은 요청에 쓴다. "
                 "인자: attachment_id (필수, 예: 'a001')."
             ),
-            handler=lambda args: classifier.get_attachment_text(args.get("attachment_id", "a001")),
+            handler=lambda args: classifier.get_attachment_text(args["attachment_id"]),
             parameters={
                 "type": "object",
                 "properties": {
@@ -101,8 +101,8 @@ def default_skills(classifier) -> list[Skill]:
                 "인자: message (필수, 사용자 메시지 원문)."
             ),
             handler=lambda args: (
-                "메일 관리 Agent입니다. '건 트리', 'c-m0001 타임라인', 'a001 첨부 내용'처럼 "
-                "물어보시면 분류된 건과 메일을 안내해 드립니다."
+                "메일 속 필요한 내용을 함께 찾아볼게요. 최근 메일 요약이나 "
+                "최종 견적, 업무 진행 상황을 편하게 물어보세요."
             ),
             parameters={
                 "type": "object",
@@ -115,4 +115,42 @@ def default_skills(classifier) -> list[Skill]:
                 "required": ["message"],
             },
         ),
+    ]
+
+
+def mailbox_skills(indexed: dict, llm_call) -> list[Skill]:
+    """Production tools use the real read-only mailbox, never mock records."""
+    from app import search, grouping
+    mails = grouping._mails_from(indexed)
+
+    def schema(name, description):
+        return {"type": "object", "properties": {name: {"type": "string", "description": description}},
+                "required": [name], "additionalProperties": False}
+
+    def tree(_):
+        return {"cases": [{"id": c["id"], "title": c["title"],
+                           "mail_count": len(c.get("mail_ids", [])),
+                           "attachment_ids": c.get("attachment_ids", [])}
+                          for c in indexed.get("cases", [])]}
+
+    def case_emails(args):
+        case = next((c for c in indexed.get("cases", []) if c["id"] == args["case_id"]), None)
+        if case is None:
+            raise ValueError("해당 업무를 찾을 수 없습니다. get_tree에서 실제 ID를 확인하세요.")
+        return sorted([mails[mid] for mid in case["mail_ids"] if mid in mails], key=lambda m: m.get("sent_at", ""))
+
+    def attachment(args):
+        aid = args["attachment_id"]
+        if aid not in indexed.get("attachment_texts", {}):
+            raise ValueError("해당 첨부를 찾을 수 없습니다. 조회 결과의 ID를 사용하세요.")
+        return indexed["attachment_texts"][aid]
+
+    return [
+        Skill("search_documents", "특정 업무의 견적, 금액, 일정, 첨부 문서 질문에 답하고 검증 근거를 반환합니다. 원래 질문을 그대로 전달하세요. 최근 메일 전체 요약에는 사용하지 마세요.",
+              lambda a: search.answer_question(a["question"], indexed, llm_call), schema("question", "사용자 원래 질문")),
+        Skill("summarize_recent_mail", "수신 시각 기준 최신 12통을 실제 본문으로 요약합니다. 메일 수와 기간 및 원문 출처를 반환합니다. 인자 없음.",
+              lambda _: search._recent_summary(indexed, llm_call), {"type": "object", "properties": {}, "additionalProperties": False}),
+        Skill("get_tree", "실제 업무 목록과 ID, 첨부 ID를 조회합니다. 업무 이름만 알고 ID를 모를 때 먼저 사용하세요.", tree),
+        Skill("get_case_emails", "조회한 case_id의 실제 메일 본문과 수신일을 타임라인으로 반환합니다.", case_emails, schema("case_id", "get_tree에서 확인한 ID")),
+        Skill("get_attachment_text", "조회한 attachment_id의 실제 문서 전문을 읽습니다.", attachment, schema("attachment_id", "get_tree에서 확인한 첨부 ID")),
     ]

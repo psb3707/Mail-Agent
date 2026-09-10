@@ -8,6 +8,7 @@ WORKDIR /app
 # 의존성 먼저 복사 (레이어 캐시 활용)
 COPY pyproject.toml README.md ./
 COPY app ./app
+COPY agent ./agent
 
 # 의존성 설치 (PoC — DB·빌드 도구 불필요, 순수 런타임 의존성)
 RUN pip install --no-cache-dir -e .

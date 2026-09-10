@@ -1366,6 +1366,55 @@ footer  {
 }
 
 
+
+/* Answer reading surface — same workspace design tokens. */
+.assistant.has-answer .assistant-intro,.assistant.has-answer .eyebrow,.assistant.has-answer .suggestions{display:none}
+.assistant.has-answer .assistant-body{padding:16px 24px 24px}
+.answer{white-space:normal;margin-top:24px}
+.answer-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px}
+.answer-toolbar .answer-label{margin:0;display:flex;align-items:center;gap:8px}
+.answer-toolbar button{font-size:12px;padding:4px 8px}
+.question-echo{padding:12px 16px;background:var(--tint);border-radius:12px;color:var(--primary);margin-bottom:16px;overflow-wrap:anywhere;font-size:14px}
+.question-echo small{display:block;font-size:12px;margin-bottom:4px;font-weight:600}
+.answer-scope{font-size:12px;color:var(--muted);margin:0 0 16px}
+.answer-content{font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+.answer-content>p:first-child,.answer-content>h1:first-child+p{background:var(--canvas);border-left:3px solid var(--primary);padding:16px;border-radius:0 8px 8px 0;color:var(--ink);margin-top:0}
+.answer-content h1,.answer-content h2,.answer-content h3,.answer-content h4{font-size:16px;line-height:1.6;margin:24px 0 12px;font-weight:600;letter-spacing:-.4px}
+.answer-content h1{font-size:18px;margin-top:0}
+.answer-content p{margin:0 0 12px}
+.answer-content strong{font-weight:700;color:var(--ink)}
+.answer-content ul,.answer-content ol{margin:0 0 16px;padding-left:20px}
+.answer-content li{padding-left:4px;margin-bottom:8px}
+.answer-content li::marker{color:var(--primary)}
+.answer-content li p{margin-bottom:4px}
+.answer-content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.answer-content blockquote{margin:16px 0;padding:12px 16px;border-left:3px solid var(--line);color:var(--muted)}
+.answer-content pre{white-space:pre-wrap;background:var(--soft);padding:12px;border-radius:8px;overflow-wrap:anywhere}
+.answer-content code{font-size:12px;background:var(--soft);border-radius:4px;padding:0 4px}
+.answer-content a{color:var(--primary);text-decoration:underline;text-underline-offset:3px}
+.answer-content table{display:block;overflow-x:auto;border-collapse:collapse;margin:16px 0;font-size:12px;max-width:100%}
+.answer-content th,.answer-content td{padding:8px 12px;border:1px solid var(--line);text-align:left;min-width:80px}
+.answer-content th{background:var(--soft);font-weight:600}
+.answer-source{margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
+.source-label{font-size:12px;color:var(--muted);margin-bottom:12px;font-weight:600}
+.source-file{display:flex;align-items:flex-start;gap:12px;border:1px solid var(--line);background:var(--canvas);padding:12px;border-radius:8px;font-size:12px;overflow-wrap:anywhere}
+.source-file .icon{color:var(--primary)}
+.source-file span{min-width:0}
+.source-file small{display:block;color:var(--muted);margin-top:4px}
+.source-details{margin-top:12px;font-size:12px}
+.source-details>summary{cursor:pointer;padding:8px 0;color:var(--muted);font-weight:600}
+.source-excerpt{margin:8px 0;padding:12px;background:var(--canvas);border:1px solid var(--line);border-radius:8px;overflow-wrap:anywhere;white-space:pre-wrap;line-height:1.8}
+.source-excerpt p{margin-top:8px;color:var(--muted)}
+.source-excerpt .meta{display:block;margin-bottom:4px}
+#answer-dialog{width:min(880px,calc(100% - 32px))}
+#answer-dialog .dialog-body{padding:32px 40px}
+#answer-dialog .answer-content{font-size:16px}
+#answer-dialog .answer-content h2{font-size:18px}
+.answer-loading{display:flex;align-items:center;gap:12px;padding:16px;background:var(--canvas);border-radius:12px;color:var(--muted);font-size:12px}
+.answer-loading .icon{color:var(--primary);flex-shrink:0}
+.answer-error{border-left:3px solid var(--warning);padding:16px;background:var(--warning-bg);border-radius:8px;font-size:14px}
+@media(max-width:650px){ #answer-dialog .dialog-body{padding:24px}.answer-toolbar{flex-wrap:wrap}}
+
 </style>
 </head>
 <body>
@@ -1407,10 +1456,11 @@ footer  {
 <section id="notifications-view" class="view" hidden><p class="section-note">업무와 별도로 확인할 반복 알림과 공지입니다.</p>{% for label, items in [('반복 알림', alerts), ('기타 공지 및 행정', misc)] %}<div class="panel"><details><summary><strong>{{ label }}</strong> <span class="badge">{{ items|length }}통</span></summary><div class="mail-list">{% for item in items %}<div style="padding:12px 0;border-bottom:1px solid var(--line)">{{ item.subject }}</div>{% else %}<p class="empty">항목이 없습니다.</p>{% endfor %}</div></details></div>{% endfor %}</section>
 <section id="classify-view" class="view" hidden><p class="section-note">새 메일이 어느 업무로 연결되는지 확인해 보세요.</p><div class="panel"><span class="folder-icon">{{ icon('spark') }}</span><h2 style="margin-top:16px">새로운 메일도, 알맞은 업무로.</h2><p class="muted" style="margin-top:8px">기존 업무에 연결하거나, 새 업무 또는 알림으로 분류합니다.</p><form id="classify-form"><label for="newmail-subj" style="display:block;margin-top:24px">새 메일 제목</label><div class="form-row" style="margin-top:8px"><input id="newmail-subj" required placeholder="예: 〔Project N_CX〕2차 견적 요청"><button class="primary" id="classify-btn" style="white-space:nowrap">분류하기</button></div></form><div id="classify-result" role="status" aria-live="polite" class="diff">제목을 입력하면 분류 결과를 확인할 수 있습니다.</div><p class="helper">시연 입력은 현재 서버 세션에만 보관됩니다.</p></div></section>
 </div>
-<aside class="assistant" aria-label="AI 어시스턴트"><div class="assistant-head"><div class="assistant-title"><span class="spark">{{ icon('spark') }}</span><h2>AI 어시스턴트</h2><span class="badge" style="margin-left:auto">문서 기반</span></div><p>메일 너머, 문서 속 정확한 답까지.</p></div><div class="assistant-body"><div class="assistant-intro"><strong>어떤 업무를 찾고 계세요?</strong><p>기억나는 단서만 알려주세요.<br>관련 문서와 답변의 근거를 함께 찾아드립니다.</p></div><div class="eyebrow">이렇게 물어보세요</div><div class="suggestions"><button data-question="N_CX 외주 견적 최종 얼마였지?">N_CX 외주 견적 최종 얼마였지? <span>↗</span></button><button data-question="워크숍 버스 몇 시 어디서?">워크숍 버스 몇 시, 어디서 타지? <span>↗</span></button></div><form id="ask-form" class="ask-form"><input id="q" required aria-label="AI에게 질문" placeholder="메일과 문서에 대해 물어보세요" autocomplete="off"><button id="ask-btn" class="primary" aria-label="질문 보내기">↑</button></form><p class="helper">Enter로 질문 · 답변과 문서 근거를 함께 확인</p><div id="answer" class="answer" role="status" aria-live="polite"></div></div></aside>
+<aside class="assistant" aria-label="AI 어시스턴트"><div class="assistant-head"><div class="assistant-title"><span class="spark">{{ icon('spark') }}</span><h2>AI 어시스턴트</h2><span class="badge" style="margin-left:auto">문서 기반</span></div><p>메일 너머, 문서 속 정확한 답까지.</p></div><div class="assistant-body"><div class="assistant-intro"><strong>어떤 업무를 찾고 계세요?</strong><p>기억나는 단서만 알려주세요.<br>관련 문서와 답변의 근거를 함께 찾아드립니다.</p></div><div class="eyebrow">이렇게 물어보세요</div><div class="suggestions"><button data-question="최근 메일 요약해봐">최근 메일, 핵심만 요약해줘 <span>↗</span></button><button data-question="N_CX 외주 견적 최종 얼마였지?">N_CX 외주 견적 최종 얼마였지? <span>↗</span></button><button data-question="워크숍 버스 몇 시 어디서?">워크숍 버스 몇 시, 어디서 타지? <span>↗</span></button></div><form id="ask-form" class="ask-form"><input id="q" required aria-label="AI에게 질문" placeholder="메일과 문서에 대해 물어보세요" autocomplete="off"><button id="ask-btn" class="primary" aria-label="질문 보내기">↑</button></form><p class="helper">Enter로 질문 · 답변과 문서 근거를 함께 확인</p><div id="answer" class="answer" role="status" aria-live="polite"></div></div></aside>
 </div><footer><span>Mail Agent · 메일은 통으로, 일은 건으로.</span><span>가상 메일 데이터 기반 PoC</span></footer>
 </main></div>
 <dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-head"><div><p class="eyebrow">업무 타임라인</p><h2 id="detail-title"></h2></div><button id="close-dialog" aria-label="타임라인 닫기">✕</button></div><div id="detail-content" class="dialog-body"></div></dialog>
+<dialog id="answer-dialog" aria-labelledby="answer-dialog-title"><div class="dialog-head"><div><p class="eyebrow">AI ASSISTANT</p><h2 id="answer-dialog-title">답변 자세히 보기</h2></div><button id="close-answer-dialog" aria-label="답변 자세히 보기 닫기">✕</button></div><div class="dialog-body" id="answer-dialog-body"></div></dialog>
 <script>
 const byId=id=>document.getElementById(id);
 const titles={case:'업무 모아보기',arrival:'전체 메일',versions:'문서 버전',notifications:'알림 및 기타',classify:'새 메일 분류'};
@@ -1421,7 +1471,40 @@ const cards={{ cards|tojson }}, filenames={{ filenames|tojson }};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 document.querySelectorAll('[data-detail]').forEach(btn=>btn.onclick=()=>{const c=cards[Number(btn.dataset.detail)];byId('detail-title').textContent=c.title;byId('detail-content').innerHTML='<div class="timeline">'+c.mails.map(m=>`<article class="timeline-mail"><div class="meta">${esc(m.sent_at.slice(0,10))} · ${esc(m.sender_name)}</div><h3>${esc(m.subject)}</h3><p>${esc(m.body)}</p></article>`).join('')+'</div>'+(c.attachments.length?'<h3>관련 첨부 문서</h3>'+c.attachments.map(a=>`<span class="attachment">${esc(filenames[a]||a)}</span>`).join(''):'');byId('detail-dialog').showModal()});byId('close-dialog').onclick=()=>byId('detail-dialog').close();
 async function post(url,payload){const response=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});if(!response.ok)throw new Error('요청을 처리하지 못했습니다. 잠시 후 다시 시도해 주세요.');return response.json()}
-byId('ask-form').onsubmit=async e=>{e.preventDefault();const q=byId('q').value.trim();if(!q||byId('ask-btn').disabled)return;const box=byId('answer');byId('ask-btn').disabled=true;box.setAttribute('aria-busy','true');box.textContent='관련 문서를 살펴보고 근거를 찾고 있습니다…';try{const r=await post('/ask',{question:q});box.innerHTML='<div class="answer-label">답변 · 문서에서 찾은 결과</div>'+(r.cached?'<span class="cached-badge">캐시 폴백 답변</span><br>':'')+esc(r.answer||'답변을 찾지 못했습니다.')+(r.attachment?`<span class="attachment">${esc(filenames[r.attachment]||r.attachment)}</span>`:'')+(r.evidence?.length?'<div class="evidence"><strong>이 답변의 근거</strong><ul>'+r.evidence.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></div>':'')}catch(error){box.textContent=error.message}finally{byId('ask-btn').disabled=false;box.setAttribute('aria-busy','false')}};
+function renderSources(r) {
+  let html = '';
+  if(r.attachment) html += `<div class="source-file"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>${esc(filenames[r.attachment]||r.attachment)}<small>답변에 사용한 첨부 문서</small></span></div>`;
+  if(r.sources?.length) html += `<details class="source-details"><summary>참고한 메일 ${r.sources.length}통 펼쳐보기</summary>${r.sources.map(m=>`<article class="source-excerpt"><span class="meta">${esc(m.date)} · ${esc(m.sender)}</span><strong>${esc(m.subject)}</strong><p>${esc(m.excerpt)}</p></article>`).join('')}</details>`;
+  if(r.evidence?.length) html += `<details class="source-details"><summary>문서 원문 근거 ${r.evidence.length}개 펼쳐보기</summary>${r.evidence.map(e=>`<blockquote class="source-excerpt">${esc(e)}</blockquote>`).join('')}</details>`;
+  return html ? `<section class="answer-source"><div class="source-label">${r.kind==='mail_summary'?'참고한 메일':'답변의 출처'}</div>${html}</section>` : '';
+}
+function renderAnswer(r,q) {
+  const scope = r.scope ? `<p class="answer-scope">${esc(r.scope)}</p>` : '';
+  const fallback = r.fallback ? '<span class="cached-badge">AI 응답 대신 조회 결과를 표시했어요</span>' : r.cached ? `<span class="cached-badge">${r.kind==='mail_summary'?'AI 연결 실패 · 메일 목록으로 대체':'캐시 폴백 답변'}</span>` : '';
+  return `<div class="question-echo"><small>나의 질문</small>${esc(q)}</div>${scope}${fallback}<div class="answer-content">${r.answer_html||'<p>'+esc(r.answer||'답변을 찾지 못했습니다.')+'</p>'}</div>${renderSources(r)}`;
+}
+byId('close-answer-dialog').onclick=()=>byId('answer-dialog').close();
+byId('ask-form').onsubmit=async e=>{
+  e.preventDefault();
+  const q=byId('q').value.trim();
+  if(!q||byId('ask-btn').disabled)return;
+  const box=byId('answer');
+  document.querySelector('.assistant').classList.add('has-answer');
+  byId('ask-btn').disabled=true;
+  box.setAttribute('aria-busy','true');
+  box.innerHTML='<div class="answer-loading"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><span>메일과 문서를 확인하고<br>핵심 내용을 정리하고 있습니다…</span></div>';
+  try {
+    const r=await post('/ask',{question:q});
+    const content=renderAnswer(r,q);
+    box.innerHTML='<div class="answer-toolbar"><div class="answer-label">✧ AI 답변</div><button id="expand-answer" type="button">크게 보기 ↗</button></div>'+content;
+    byId('expand-answer').onclick=()=>{byId('answer-dialog-body').innerHTML=content;byId('answer-dialog').showModal()};
+  } catch(error) {
+    box.innerHTML=`<div class="answer-error">${esc(error.message)}<p class="helper">질문을 다시 보내 주세요.</p></div>`;
+  } finally {
+    byId('ask-btn').disabled=false;
+    box.setAttribute('aria-busy','false');
+  }
+};
 document.querySelectorAll('[data-question]').forEach(btn=>btn.onclick=()=>{byId('q').value=btn.dataset.question;byId('ask-form').requestSubmit()});
 byId('classify-form').onsubmit=async e=>{e.preventDefault();const subject=byId('newmail-subj').value.trim();if(!subject||byId('classify-btn').disabled)return;byId('classify-btn').disabled=true;const box=byId('classify-result');box.textContent='메일의 업무 맥락을 확인하고 있습니다…';try{const r=await post('/classify',{new_mail:{id:'demo-'+Date.now(),subject,body:'추가 요청드립니다.',sender_dept:'디지털전략팀'}});if(r.error)throw new Error(r.error);const card=cards.find(c=>c.id===r.case_id);const labels={existing:'기존 업무에 연결 · '+(card?.title||r.case_id),new_case:'새로운 업무 후보로 분류했습니다.',non_case:'업무 외 알림 및 기타로 분류했습니다.'};box.textContent=labels[r.decision]||'분류 결과를 확인하지 못했습니다.'}catch(error){box.textContent=error.message}finally{byId('classify-btn').disabled=false}};
 </script>
