@@ -15,16 +15,104 @@
 | `data/DESIGN.md` | ✅ 말투 계승 규칙, 건 구성, 시연 정답 세트 |
 | `scripts/generate_data.py` | ✅ 재현 가능 (seed 고정) |
 | `scripts/generate_attachments.py` | ✅ |
-| `scripts/build_index.py` | ⬜ 당일 |
+| `scripts/build_index.py` | ✅ 사전 계산 완료 (`indexed.json` 생성) |
+| `tests/test_build_index.py` | ✅ index 무결성 · 순서 무관 재현 테스트 |
 | `app/` (FastAPI 단일 페이지) | ⬜ 당일 |
 
 ## 데이터 재생성
 
 ```bash
-python3 -m venv .venv && ./.venv/bin/pip install openpyxl reportlab pypdf
+python3 -m venv .venv && ./.venv/bin/pip install -e .
 ./.venv/bin/python scripts/generate_data.py
 ./.venv/bin/python scripts/generate_attachments.py
+./.venv/bin/python scripts/build_index.py
 ```
+
+## 기술 스택 — 단계별 역할
+
+> 핵심 원칙: 메일의 "도착 → 재조립 → 질의 → 답변" 각 단계에서
+> *규칙으로 되는 판단은 규칙으로, 규칙으로 안 되는 판단(같은 건 · 같은 문서의
+> 어느 버전인가)에만 AI를 쓴다.*
+>
+> 가벼운 단계(도착·색인·화면)는 검증된 도구가 맡고, 무거운 단계(재조립·정답·버전)는
+> 항상 LLM 호출이 기본이며 캐시는 네트워크 장애 시 자동 폴백으로만 동작한다.
+
+### 0. 데이터 생성 계층 (사전 준비)
+
+| 도구 | 역할 | 비유 |
+|---|---|---|
+| `generate_data.py` | 말투 계승 400통 · 9건 · 첨부 16개 메타데이터 생성 | 가상 메일함 준비 |
+| `generate_attachments.py` | 실제 PDF/엑셀 첨부 파일 생성 (금액·일자·버전을 문자열로 심음) | 근거 인용 재료 만들기 |
+| `reportlab` | PDF 첨부 렌더링 | 문서 서식 출력 |
+| `openpyxl` | XLSX 첨부 생성 | 스프레드시트 출력 |
+| `pypdf` | (색인 계층에서) PDF 텍스트 추출 | 서류 복사 |
+
+> 구분: `openpyxl`은 **생성**(첨부 모킹)과 **추출**(색인) 양쪽에서 쓰인다.
+
+### 1. 도착·색인 계층 (`scripts/build_index.py`)
+
+| 도구 | 역할 | 비유 |
+|---|---|---|
+| Python `re` 정규화 | 말머리·`RE:`·`_`·공백 정규화 + 프로젝트 토큰 추출 | 이름표의 표기 흔들림 평준화 |
+| `pypdf` | PDF 본문 텍스트 추출 | 서류를 복사기로 복사 |
+| `openpyxl` (`read_only` 모드) | 엑셀 셀 텍스트 추출 | 표를 횡성한 카드로 정리 |
+| 안정 키(대표 메일 id) | 건 ID를 콘텐츠 기반으로 고정 → 재실행해도 흔들림 없음 (멱등) | 폴더 이름을 내용으로 고정 |
+| `tests/test_build_index.py` | index 무결성·순서 무관(재현) 검증 | 품질 보험 |
+
+**결과물** `data/indexed.json`: `cases[]` (건 그룹) · `attachment_texts` (첨부 전문) ·
+`version_groups[]` (버전 계열) · `non_cases` (비건 처리).
+
+### 2. 재조립 판단 계층 `app/grouping.py` (장면 2)
+
+| 도구 | 역할 | 비유 |
+|---|---|---|
+| LLM (Claude) | "이 통들이 같은 건인가" 내용 기반 판단 | 같은 일을 함께 본 사람의 알아차림 |
+| 캐시(cache) | 네트워크 장애 시 사전 계산 답으로 자동 전환 | 폴백, 기본 경로 아님 |
+
+> 이 계층은 항상 `indexed.json`을 **읽기만** 한다. 원본 메일함은 절대 수정하지 않는다.
+
+### 3. 자연어 질의 계층 `app/search.py` (장면 3)
+
+| 단계 | 도구 | 비유 |
+|---|---|---|
+| ① 질문에서 단서 추출 | LLM 1회 | "어느 서류인지 대충 짐작" |
+| ② 후보 축소 (5~10개) | `indexed.json` 필터 · 키워드 | 몇 장만 꺼내기 |
+| ③ 정답 선정 + 근거 인용 | LLM 1회 → 문서 속 실제 값을 인용 | "이 금액이 그 파일에 적혀 있습니다" |
+| 폴백 | `llm.py` 캐시 | 네트워크 끊겨도 데모 유지 |
+
+### 4. 버전 판별 계층 `app/versions.py` (장면 4)
+
+| 도구 | 역할 | 비유 |
+|---|---|---|
+| LLM | 파일명 · 내용 비교로 버전 계열 판별 | 같은 문서의 몇 번째 저장본인지 가림 |
+| 캐시 | 장애 시 사전 계산 · 폴백 | 폴백 전용 |
+
+### 5. 서빙 계층 `app/main.py` + `templates/index.html`
+
+| 도구 | 역할 | 비유 |
+|---|---|---|
+| FastAPI + uvicorn | 웹 서버, 라우트 3개 (`/`, `/ask`, `/versions`) | 접수 창구 |
+| Jinja2 | 단일 페이지 템플릿에 데이터 끼워 넣기 | 화면 골격 + 실데이터 |
+| 인메모리 저장 | 동적 구조는 세션 전용 (영속화 비범위) | 데모용 휘발 기록 |
+
+### 계층 의존성 흐름
+
+```
+[도착·색인] build_index.py (정규화 + pypdf + openpyxl)
+      ↓  indexed.json (읽기 전용 · 원본 무수정)
+[재조립]    grouping.py ──→ LLM(Claude) ──→ 캐시 폴백
+[질의]      search.py   ──→ LLM 1회(단서) + LLM 1회(근거) ──→ 캐시 폴백
+[버전]      versions.py ──→ LLM ──→ 캐시 폴백
+      ↓
+[서빙]      main.py (FastAPI) + templates/index.html (Jinja2)
+             토글: 도착순 ↔ 건 단위 · 질문창 · 근거 표시
+```
+
+### 선택 이유 (규칙 vs AI 경계)
+
+- **규칙으로 되는 것**: 말머리·접두사 정규화, 프로젝트 토큰 추출, 건 ID 안정 키, 첨부 텍스트 추출, 파일명 버전 패턴 — 모두 검증된 도구(Python 표준 · pypdf · openpyxl)로 충분.
+- **AI로 맡기는 것**: "같은 건인가"(내용 기반 재조립), "정답 문서 선택 + 근거 인용", "같은 문서의 어느 버전인가" — 규칙으로는 불가능한 판단만.
+- **캐시의 지위**: 기본 경로가 아니라 장애 시 자동 폴백. 라이브 호출이 기본이므로 데모가 "짜고 치는" 것으로 보이지 않는다.
 
 ## 데이터가 시연을 성립시키는 방식
 
