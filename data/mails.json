@@ -1,0 +1,6134 @@
+{
+  "mails": [
+    {
+      "id": "m0054",
+      "subject": "〔전사공지〕2025년 하계휴가 시행 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-15T11:12:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0089",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (9월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-17T08:53:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0029",
+      "subject": "〔고객채널TF〕TF 킥오프 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-18T08:20:00+09:00",
+      "body": "고객채널 개선 TF 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "BG03"
+    },
+    {
+      "id": "m0199",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-18T12:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0238",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-21T13:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0345",
+      "subject": "Fw: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-21T15:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0188",
+      "subject": "Fw: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-22T08:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0352",
+      "subject": "FW: 관련 件 확인 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-22T13:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0030",
+      "subject": "〔고객채널TF〕주간 회의록 공유",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-23T08:20:00+09:00",
+      "body": "고객채널 개선 TF 관련 내용입니다.",
+      "attachments": [
+        "a011"
+      ],
+      "reply_to": "m0029",
+      "_case": "BG03"
+    },
+    {
+      "id": "m0221",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-24T17:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0323",
+      "subject": "FW: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-25T17:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0267",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-26T08:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0337",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-26T11:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0260",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-27T18:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0034",
+      "subject": "〔경영기획〕상반기 실적 취합 요청",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-09-29T14:53:00+09:00",
+      "body": "2026 상반기 실적 관련 내용입니다.",
+      "attachments": [
+        "a013"
+      ],
+      "reply_to": null,
+      "_case": "BG04"
+    },
+    {
+      "id": "m0170",
+      "subject": "Re: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-02T08:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0031",
+      "subject": "RE: 〔고객채널TF〕개선 과제 우선순위 논의",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-02T08:20:00+09:00",
+      "body": "고객채널 개선 TF 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0030",
+      "_case": "BG03"
+    },
+    {
+      "id": "m0367",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (10/2 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-02T09:30:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0032",
+      "subject": "〔고객채널TF〕중간 보고 자료 공유",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-03T08:20:00+09:00",
+      "body": "고객채널 개선 TF 관련 내용입니다.",
+      "attachments": [
+        "a012"
+      ],
+      "reply_to": "m0031",
+      "_case": "BG03"
+    },
+    {
+      "id": "m0071",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-03T17:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0194",
+      "subject": "FW: 〔요청〕검토 부탁드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-05T16:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0300",
+      "subject": "Fw: 〔요청〕검토 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-06T09:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0035",
+      "subject": "〔경영기획〕부서별 실적 자료 제출 안내",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-06T14:53:00+09:00",
+      "body": "2026 상반기 실적 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0034",
+      "_case": "BG04"
+    },
+    {
+      "id": "m0379",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-07T11:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0175",
+      "subject": "FW: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-08T08:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0287",
+      "subject": "FW: 〔요청〕검토 부탁드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-08T12:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0148",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-08T13:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0397",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-09T10:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0033",
+      "subject": "〔고객채널TF〕TF 종료 보고",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-12T08:20:00+09:00",
+      "body": "고객채널 개선 TF 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0032",
+      "_case": "BG03"
+    },
+    {
+      "id": "m0167",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-14T13:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0400",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-15T09:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0268",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-16T11:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0182",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-17T12:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0036",
+      "subject": "〔경영기획〕실적 보고회 일정 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-17T14:53:00+09:00",
+      "body": "2026 상반기 실적 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0035",
+      "_case": "BG04"
+    },
+    {
+      "id": "m0227",
+      "subject": "Re: 관련 件 확인 부탁드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-17T17:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0128",
+      "subject": "Re: 〔협조〕자료 회신 요망",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-19T12:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0099",
+      "subject": "〔IT기획팀〕10월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-19T14:12:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0084",
+      "subject": "Fw: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-19T15:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0178",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-20T12:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0146",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-21T08:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0129",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (10월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-21T14:08:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0386",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (10/23 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-23T11:12:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0109",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-23T16:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0330",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-24T16:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0166",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-26T09:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0259",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-26T18:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0073",
+      "subject": "FW: 〔요청〕검토 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-28T08:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0076",
+      "subject": "FW: 회의 일정 관련 문의드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-28T08:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0050",
+      "subject": "〔총무팀〕2차 사옥 정기 소방점검 실시 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-28T15:12:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0276",
+      "subject": "RE: 관련 件 확인 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-10-29T14:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0242",
+      "subject": "Re: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-01T10:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0177",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-01T10:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0249",
+      "subject": "Fw: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-01T17:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0376",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-01T18:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0292",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-04T09:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0152",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-05T10:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0093",
+      "subject": "Fw: 〔협조〕자료 회신 요망",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-06T11:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0090",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-08T18:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0079",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-09T17:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0350",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-09T18:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0025",
+      "subject": "〔ESG공시〕공시 항목 담당자 지정 안내",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-11T11:12:00+09:00",
+      "body": "ESG 공시 대응 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "BG02"
+    },
+    {
+      "id": "m0117",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-12T09:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0019",
+      "subject": "〔D-MIG〕이관 대상 테이블 목록 검토 요청",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-13T12:00:00+09:00",
+      "body": "D-MIG 데이터 이관 관련 내용입니다.",
+      "attachments": [
+        "a006"
+      ],
+      "reply_to": null,
+      "_case": "BG01"
+    },
+    {
+      "id": "m0312",
+      "subject": "FW: 관련 件 확인 부탁드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-14T08:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0322",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-14T14:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0377",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-17T09:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0389",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-17T11:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0387",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-18T18:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0027",
+      "subject": "〔ESG공시〕외부 검증 일정 안내",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-19T11:12:00+09:00",
+      "body": "ESG 공시 대응 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0026",
+      "_case": "BG02"
+    },
+    {
+      "id": "m0020",
+      "subject": "〔D-MIG〕이관 일정 협의 관련",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-19T12:00:00+09:00",
+      "body": "D-MIG 데이터 이관 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0019",
+      "_case": "BG01"
+    },
+    {
+      "id": "m0158",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-19T12:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0293",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-19T14:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0246",
+      "subject": "FW: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-19T16:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0026",
+      "subject": "〔ESG공시〕1차 초안 검토 요청",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-20T11:12:00+09:00",
+      "body": "ESG 공시 대응 관련 내용입니다.",
+      "attachments": [
+        "a009"
+      ],
+      "reply_to": "m0025",
+      "_case": "BG02"
+    },
+    {
+      "id": "m0021",
+      "subject": "〔D-MIG〕이관 비용 견적서 회신드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-21T12:00:00+09:00",
+      "body": "D-MIG 데이터 이관 관련 내용입니다.",
+      "attachments": [
+        "a007"
+      ],
+      "reply_to": "m0020",
+      "_case": "BG01"
+    },
+    {
+      "id": "m0381",
+      "subject": "〔IT기획팀〕11월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-21T18:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0356",
+      "subject": "Re: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-24T13:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0258",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-25T08:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0100",
+      "subject": "〔인사팀〕2025년 하반기 인사발령 공지",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-25T15:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0112",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-25T15:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0355",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-26T11:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0311",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (11월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-26T14:53:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0209",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-26T16:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0398",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (11/26 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-26T16:41:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0308",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-27T12:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0139",
+      "subject": "Re: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-28T11:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0338",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-28T16:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0092",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-11-29T14:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0210",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-01T18:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0153",
+      "subject": "FW: 회의 일정 관련 문의드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-02T08:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0028",
+      "subject": "〔ESG공시〕최종 공시안 확정",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-02T11:12:00+09:00",
+      "body": "ESG 공시 대응 관련 내용입니다.",
+      "attachments": [
+        "a010"
+      ],
+      "reply_to": "m0027",
+      "_case": "BG02"
+    },
+    {
+      "id": "m0022",
+      "subject": "Re: 〔D MIG〕검증 결과 공유",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-04T12:00:00+09:00",
+      "body": "D-MIG 데이터 이관 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0021",
+      "_case": "BG01"
+    },
+    {
+      "id": "m0124",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-04T13:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0087",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-05T09:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0274",
+      "subject": "Re: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-05T12:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0203",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-05T13:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0154",
+      "subject": "Fw: 〔협조〕자료 회신 요망",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-07T10:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0286",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-10T18:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0357",
+      "subject": "〔협조〕자료 회신 요망",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-11T17:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0024",
+      "subject": "Re: 〔D-MIG〕본이관 일정 확정 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-13T12:00:00+09:00",
+      "body": "D-MIG 데이터 이관 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0023",
+      "_case": "BG01"
+    },
+    {
+      "id": "m0228",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-13T13:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0126",
+      "subject": "Re: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-13T18:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0062",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-14T16:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0224",
+      "subject": "RE: 회의 일정 관련 문의드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-14T17:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0318",
+      "subject": "RE: 〔요청〕검토 부탁드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-18T13:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0244",
+      "subject": "FW: 〔협조〕자료 회신 요망",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-19T08:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0328",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (12월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-19T09:53:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0023",
+      "subject": "〔D-MIG〕이관 리허설 결과 보고",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-19T12:00:00+09:00",
+      "body": "D-MIG 데이터 이관 관련 내용입니다.",
+      "attachments": [
+        "a008"
+      ],
+      "reply_to": "m0022",
+      "_case": "BG01"
+    },
+    {
+      "id": "m0278",
+      "subject": "〔공유〕참고 자료 전달드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-20T09:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0163",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-21T14:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0336",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-22T15:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0214",
+      "subject": "〔IT기획팀〕12월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-22T15:30:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0220",
+      "subject": "Fw: 회의 일정 관련 문의드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-23T08:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0288",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-24T12:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0196",
+      "subject": "RE: 회의 일정 관련 문의드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-25T15:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0317",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-26T10:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0257",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-26T15:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0309",
+      "subject": "Fw: 〔요청〕검토 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-26T17:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0183",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-28T10:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0193",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-28T16:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0198",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-28T17:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0208",
+      "subject": "〔공유〕참고 자료 전달드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-29T09:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0370",
+      "subject": "Re: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-29T10:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0360",
+      "subject": "FW: 회의 일정 관련 문의드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-29T15:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0190",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (12/31 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2025-12-31T17:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0125",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-01T10:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0270",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-01T14:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0279",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-02T11:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0225",
+      "subject": "FW: 관련 件 확인 부탁드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-03T17:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0216",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-04T08:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0141",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-04T10:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0045",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-05T13:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0191",
+      "subject": "〔IT기획팀〕1월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-06T09:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0285",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-07T10:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0284",
+      "subject": "〔총무팀〕4차 사옥 정기 소방점검 실시 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-08T18:08:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0217",
+      "subject": "〔보고〕주간 업무 현황 공유",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-09T16:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0394",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-12T09:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0040",
+      "subject": "〔멘토-멘티〕육성계획서 제출 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-12T13:00:00+09:00",
+      "body": "멘토-멘티 육성 관련 내용입니다.",
+      "attachments": [
+        "a015"
+      ],
+      "reply_to": null,
+      "_case": "BG06"
+    },
+    {
+      "id": "m0047",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-14T10:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0335",
+      "subject": "Re: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-14T16:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0302",
+      "subject": "Fw: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-16T15:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0305",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-19T16:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0085",
+      "subject": "RE: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-20T12:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0069",
+      "subject": "RE: 〔요청〕검토 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-20T14:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0041",
+      "subject": "〔멘토-멘티〕진행상황 공유 관련 공지",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-21T13:00:00+09:00",
+      "body": "멘토-멘티 육성 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0040",
+      "_case": "BG06"
+    },
+    {
+      "id": "m0043",
+      "subject": "RE: 〔멘토 멘티〕육성 결과 보고서 제출",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-21T13:00:00+09:00",
+      "body": "멘토-멘티 육성 관련 내용입니다.",
+      "attachments": [
+        "a016"
+      ],
+      "reply_to": "m0042",
+      "_case": "BG06"
+    },
+    {
+      "id": "m0107",
+      "subject": "〔전사공지〕2026년 하계휴가 시행 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-21T14:30:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0361",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-21T16:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0347",
+      "subject": "〔공유〕참고 자료 전달드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-23T17:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0105",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-25T13:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0207",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-25T14:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0042",
+      "subject": "〔멘토-멘티〕중간 점검 면담 일정",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-26T13:00:00+09:00",
+      "body": "멘토-멘티 육성 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0041",
+      "_case": "BG06"
+    },
+    {
+      "id": "m0283",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-27T10:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0065",
+      "subject": "Fw: 〔협조〕자료 회신 요망",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-27T13:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0363",
+      "subject": "FW: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-28T09:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0232",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-28T13:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0070",
+      "subject": "FW: 〔요청〕검토 부탁드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-30T10:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0298",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-30T13:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0111",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-31T09:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0108",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-31T11:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0252",
+      "subject": "Re: 〔요청〕검토 부탁드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-01-31T15:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0068",
+      "subject": "Fw: 회의 일정 관련 문의드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-01T12:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0057",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-02T13:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0320",
+      "subject": "Re: 〔협조〕자료 회신 요망",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-02T18:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0233",
+      "subject": "RE: 〔협조〕자료 회신 요망",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-02T18:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0186",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-04T10:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0169",
+      "subject": "FW: 회의 일정 관련 문의드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-04T10:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0155",
+      "subject": "〔보고〕주간 업무 현황 공유",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-05T17:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0161",
+      "subject": "〔인사팀〕2026년 상반기 인사발령 공지",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-06T15:12:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0396",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-07T16:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0137",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (2/8 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-08T14:41:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0179",
+      "subject": "Re: 회의 일정 관련 문의드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-09T08:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0156",
+      "subject": "Fw: 〔요청〕검토 부탁드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-09T10:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0392",
+      "subject": "Fw: 회의 일정 관련 문의드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-12T09:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0138",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-12T15:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0382",
+      "subject": "Fw: 관련 件 확인 부탁드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-12T17:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0247",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-13T12:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0236",
+      "subject": "RE: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-14T10:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0049",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-16T08:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0120",
+      "subject": "〔IT기획팀〕2월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-16T09:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0078",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-16T11:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0052",
+      "subject": "FW: 관련 件 확인 부탁드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-16T13:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0056",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (2/16 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-16T18:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0172",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-19T18:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0289",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-19T18:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0239",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-20T09:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0358",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-20T11:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0116",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (2월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-24T14:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0339",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-26T12:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0104",
+      "subject": "〔리스크관리부〕4분기 내부통제 점검 협조 요청",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-26T17:20:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0346",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-28T14:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0326",
+      "subject": "FW: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-02-28T17:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0280",
+      "subject": "FW: 〔요청〕검토 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-01T18:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0061",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-01T18:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0333",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-02T15:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0226",
+      "subject": "Re: 〔협조〕자료 회신 요망",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-03T11:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0130",
+      "subject": "〔리스크관리부〕1분기 내부통제 점검 협조 요청",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-04T15:30:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0306",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-06T13:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0181",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-07T11:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0165",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-08T12:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0206",
+      "subject": "Fw: 〔협조〕자료 회신 요망",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-08T14:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0184",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (3월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-09T11:20:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0231",
+      "subject": "〔보고〕주간 업무 현황 공유",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-10T14:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0277",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-10T15:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0048",
+      "subject": "〔요청〕검토 부탁드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-10T17:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0115",
+      "subject": "Fw: 관련 件 확인 부탁드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-12T17:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0371",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-13T10:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0380",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-14T12:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0164",
+      "subject": "Fw: 〔요청〕검토 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-14T13:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0202",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (3/15 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-15T15:53:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0349",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-15T18:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0275",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-16T16:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0127",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-17T13:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0255",
+      "subject": "Re: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-17T16:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0091",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-18T09:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0272",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-18T15:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0145",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-20T14:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0341",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-21T09:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0290",
+      "subject": "RE: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-21T16:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0044",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-22T08:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0088",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-22T15:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0395",
+      "subject": "RE: 관련 件 확인 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-23T17:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0195",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-25T16:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0296",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-26T10:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0072",
+      "subject": "〔리스크관리부〕2분기 내부통제 점검 협조 요청",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-27T14:53:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0303",
+      "subject": "RE: 관련 件 확인 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-28T16:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0291",
+      "subject": "Fw: 〔요청〕검토 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-29T14:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0123",
+      "subject": "〔IT기획팀〕3월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-30T13:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0250",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-03-31T17:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0082",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-01T09:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0180",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-01T10:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0340",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-03T16:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0248",
+      "subject": "〔요청〕검토 부탁드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-05T15:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0307",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-05T16:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0150",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-08T15:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0067",
+      "subject": "Re: 회의 일정 관련 문의드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-11T15:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0060",
+      "subject": "RE: 회의 일정 관련 문의드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-11T18:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0075",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-13T12:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0143",
+      "subject": "RE: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-13T13:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0316",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-14T18:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0113",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-15T09:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0281",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-15T11:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0342",
+      "subject": "Re: 〔요청〕검토 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-18T10:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0101",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-18T16:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0393",
+      "subject": "RE: 회의 일정 관련 문의드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-21T13:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0118",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-22T10:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0074",
+      "subject": "〔전사공지〕정보보호의 날 캠페인 참여 안내",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-22T11:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0142",
+      "subject": "〔요청〕검토 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-22T15:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0132",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-23T12:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0133",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-23T12:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0185",
+      "subject": "〔협조〕자료 회신 요망",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-24T14:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0212",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (4월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-24T18:12:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0159",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-26T13:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0201",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-26T18:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0261",
+      "subject": "FW: 관련 件 확인 부탁드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-27T14:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0229",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-28T18:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0103",
+      "subject": "〔IT기획팀〕4월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-04-29T09:08:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0282",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-02T08:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0051",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-02T10:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0001",
+      "subject": "〔Project N_CX〕UI/UX 외주 업체 선정 관련 협조 요청",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-04T09:20:00+09:00",
+      "body": "차세대 고객채널 UI/UX 외주 업체 선정 건으로 협조 요청드립니다.",
+      "attachments": [
+        "a002"
+      ],
+      "reply_to": null,
+      "_case": "A"
+    },
+    {
+      "id": "m0273",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-04T16:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0151",
+      "subject": "〔IT기획팀〕5월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-04T16:30:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0097",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-06T09:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0002",
+      "subject": "RE: 〔Project N_CX〕UI/UX 외주 업체 선정 관련 협조 요청",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-07T14:05:00+09:00",
+      "body": "요구사항 검토 완료했습니다. 업체 3곳 접촉하겠습니다.",
+      "attachments": [],
+      "reply_to": "m0001",
+      "_case": "A"
+    },
+    {
+      "id": "m0003",
+      "subject": "〔Project N_CX〕 1차 견적 취합본 공유",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-09T11:30:00+09:00",
+      "body": "1차 취합본입니다. 업체별 단가 기준이 달라 재요청 예정입니다.",
+      "attachments": [
+        "a003"
+      ],
+      "reply_to": null,
+      "_case": "A"
+    },
+    {
+      "id": "m0263",
+      "subject": "Fw: 〔협조〕자료 회신 요망",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-09T11:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0168",
+      "subject": "〔요청〕검토 부탁드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-09T12:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0215",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-10T13:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0271",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (5/11 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-11T14:53:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0004",
+      "subject": "〔Project N CX〕 업체 견적 취합본 공유드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-12T17:42:00+09:00",
+      "body": "3개 업체 견적 취합하여 공유드립니다. 검토 부탁드립니다.",
+      "attachments": [
+        "a001"
+      ],
+      "reply_to": null,
+      "_case": "A"
+    },
+    {
+      "id": "m0110",
+      "subject": "〔리스크관리부〕3분기 내부통제 점검 협조 요청",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-13T17:08:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0332",
+      "subject": "FW: 〔요청〕검토 부탁드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-14T10:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0005",
+      "subject": "FW: 견적 관련 문의드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-14T11:08:00+09:00",
+      "body": "취합본 관련해서 단가 산정 기준 문의드립니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "A"
+    },
+    {
+      "id": "m0046",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-14T11:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0237",
+      "subject": "〔공유〕참고 자료 전달드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-16T12:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0230",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (5월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-16T13:20:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0362",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-19T08:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0006",
+      "subject": "〔N_CX〕 최종 업체 확정 안내",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-20T16:30:00+09:00",
+      "body": "최종 업체 확정되었습니다. 계약 진행하겠습니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "A"
+    },
+    {
+      "id": "m0334",
+      "subject": "〔보고〕주간 업무 현황 공유",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-21T12:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0234",
+      "subject": "〔총무팀〕3차 사옥 정기 소방점검 실시 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-22T10:41:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0319",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-25T12:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0353",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-28T15:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0245",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-29T08:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0313",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-29T15:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0136",
+      "subject": "Re: 〔협조〕자료 회신 요망",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-05-31T18:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0240",
+      "subject": "〔공유〕참고 자료 전달드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-02T09:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0304",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-03T12:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0119",
+      "subject": "RE: 관련 件 확인 부탁드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-04T10:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0096",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-04T12:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0114",
+      "subject": "Fw: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-05T12:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0160",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-06T14:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0037",
+      "subject": "〔정보보호센터〕분기 보안점검 실시 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-08T16:08:00+09:00",
+      "body": "정보보호 점검 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "BG05"
+    },
+    {
+      "id": "m0122",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-09T09:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0218",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-09T16:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0131",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-10T16:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0080",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-10T17:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0081",
+      "subject": "〔경영지원부〕법인카드 사용 지침 개정 안내 (6월)",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-12T14:20:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0390",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-12T14:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0344",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-13T08:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0038",
+      "subject": "Re: 〔정보보호센터〕취약점 조치 요청",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-14T16:08:00+09:00",
+      "body": "정보보호 점검 관련 내용입니다.",
+      "attachments": [
+        "a014"
+      ],
+      "reply_to": "m0037",
+      "_case": "BG05"
+    },
+    {
+      "id": "m0375",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-15T15:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0039",
+      "subject": "RE: 〔정보보호센터〕조치 결과 회신 요망",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-18T16:08:00+09:00",
+      "body": "정보보호 점검 관련 내용입니다.",
+      "attachments": [],
+      "reply_to": "m0038",
+      "_case": "BG05"
+    },
+    {
+      "id": "m0083",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-19T10:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0059",
+      "subject": "Fw: 〔요청〕검토 부탁드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-19T10:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0331",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-19T10:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0269",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-20T08:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0301",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-20T17:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0222",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-21T12:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0055",
+      "subject": "RE: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-23T08:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0373",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-24T08:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0144",
+      "subject": "RE: 관련 件 확인 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-24T18:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0176",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-25T15:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0174",
+      "subject": "Fw: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-26T14:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0310",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-27T10:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0294",
+      "subject": "관련 件 확인 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-28T13:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0157",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-28T15:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0058",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-06-30T14:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0262",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (7/2 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-02T10:53:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0256",
+      "subject": "Fw: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-04T14:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0121",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-06T11:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0265",
+      "subject": "RE: 회의 일정 관련 문의드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-06T16:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0223",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-07T18:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0383",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-08T08:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0149",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-09T16:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0329",
+      "subject": "FW: 회의 일정 관련 문의드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-10T11:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0399",
+      "subject": "Re: 회의 일정 관련 문의드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-10T15:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0365",
+      "subject": "FW: 〔요청〕검토 부탁드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-12T09:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0384",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-12T12:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0325",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-14T10:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0295",
+      "subject": "RE: 〔협조〕자료 회신 요망",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-14T12:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0348",
+      "subject": "RE: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-18T08:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0135",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (7/19 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-19T12:30:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0354",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-20T08:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0134",
+      "subject": "〔IT기획팀〕7월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-20T12:53:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0364",
+      "subject": "RE: 관련 件 확인 부탁드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-21T08:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0243",
+      "subject": "Fw: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-22T11:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0211",
+      "subject": "Re: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-23T14:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0297",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-25T13:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0343",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-25T18:41:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0369",
+      "subject": "RE: 회의 일정 관련 문의드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-26T11:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0299",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-26T16:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0189",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-28T14:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0385",
+      "subject": "RE: 〔공유〕참고 자료 전달드립니다",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-28T15:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0366",
+      "subject": "RE: 회의 일정 관련 문의드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-29T17:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0102",
+      "subject": "〔인사팀〕2026년 하반기 인사발령 공지",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-29T18:00:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0374",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-30T10:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0171",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-30T15:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0251",
+      "subject": "FW: 〔협조〕자료 회신 요망",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-07-31T17:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0147",
+      "subject": "RE: 관련 件 확인 부탁드립니다",
+      "sender_name": "오세영 / SeyoungOh",
+      "sender_email": "syoh@hangyeol.co.kr",
+      "sender_dept": "리스크관리부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-01T14:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0204",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-02T13:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0391",
+      "subject": "FW: 관련 件 확인 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-03T11:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0064",
+      "subject": "Re: 〔협조〕자료 회신 요망",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-03T14:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0266",
+      "subject": "〔요청〕검토 부탁드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-05T17:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0254",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-06T14:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0173",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-06T16:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0140",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (8/7 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-07T13:12:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0235",
+      "subject": "〔공유〕참고 자료 전달드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-07T18:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0192",
+      "subject": "〔총무팀〕주차장 공사에 따른 통제 안내 (8/8 ~ )",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-08T13:08:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0086",
+      "subject": "FW: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-11T10:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0264",
+      "subject": "회의 일정 관련 문의드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-12T17:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0219",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-13T11:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0197",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-14T09:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0200",
+      "subject": "Fw: 회의 일정 관련 문의드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-14T09:41:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0066",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-17T11:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0106",
+      "subject": "〔IT기획팀〕8월 정기 시스템 점검 안내",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-19T15:12:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0053",
+      "subject": "〔그룹웨어〕전자결재 미처리 건 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-20T12:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0324",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-20T13:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0095",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-21T16:53:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0314",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-21T18:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0359",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-22T13:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0388",
+      "subject": "〔인사시스템〕근태 미입력 안내드립니다",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-24T16:08:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0007",
+      "subject": "〔Next W〕Workshop 초대장 공유",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-24T17:10:00+09:00",
+      "body": "워크숍 초대장 공유드립니다.",
+      "attachments": [
+        "a005"
+      ],
+      "reply_to": null,
+      "_case": "B"
+    },
+    {
+      "id": "m0008",
+      "subject": "Re: 〔Next W〕Workshop 초대장 공유",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-24T17:56:00+09:00",
+      "body": "확인했습니다.",
+      "attachments": [],
+      "reply_to": "m0007",
+      "_case": "B"
+    },
+    {
+      "id": "m0315",
+      "subject": "FW: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-25T18:08:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0368",
+      "subject": "RE: 회의 일정 관련 문의드립니다",
+      "sender_name": "정하늘 / HaneulJeong",
+      "sender_email": "hnjeong@hangyeol.co.kr",
+      "sender_dept": "고객채널부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-26T11:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0009",
+      "subject": "〔Next W〕 워크샵 버스 배차 및 최종 명단",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-26T16:53:00+09:00",
+      "body": "버스 배차 확정되었습니다. 첨부 명단 확인 부탁드립니다.",
+      "attachments": [
+        "a004"
+      ],
+      "reply_to": null,
+      "_case": "B"
+    },
+    {
+      "id": "m0094",
+      "subject": "Fw: 관련 件 확인 부탁드립니다",
+      "sender_name": "박서준 / SeojunPark",
+      "sender_email": "sjpark@hangyeol.co.kr",
+      "sender_dept": "IT기획팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-30T13:12:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0205",
+      "subject": "RE: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-31T08:00:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0321",
+      "subject": "Fw: 관련 件 확인 부탁드립니다",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-31T13:53:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0077",
+      "subject": "FW: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-08-31T15:30:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0017",
+      "subject": "〔러닝포털〕박지훈님,기획자를 위한 챗GPT 활용법 학습시작 안내입니다.",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-01T12:16:00+09:00",
+      "body": "기획자를 위한 챗GPT 활용법 과정 학습이 시작되었습니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "C"
+    },
+    {
+      "id": "m0015",
+      "subject": "〔러닝포털〕박지훈님,〔2026 필수〕윤리경영 학습시작 안내입니다.",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-01T13:36:00+09:00",
+      "body": "〔2026 필수〕윤리경영 과정 학습이 시작되었습니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "C"
+    },
+    {
+      "id": "m0013",
+      "subject": "〔러닝포털〕박지훈님,〔2026 법정필수〕금융권 정보보호 (내근·위촉직) 학습시작 안내입니다.",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-01T13:37:00+09:00",
+      "body": "〔2026 법정필수〕금융권 정보보호 (내근·위촉직) 과정 학습이 시작되었습니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "C"
+    },
+    {
+      "id": "m0011",
+      "subject": "〔러닝포털〕박지훈님,〔2026 필수〕ESG경영 학습시작 안내입니다.",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-01T14:20:00+09:00",
+      "body": "〔2026 필수〕ESG경영 과정 학습이 시작되었습니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "C"
+    },
+    {
+      "id": "m0351",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-01T16:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0327",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-01T18:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0378",
+      "subject": "〔그룹웨어〕메일함 용량 초과 안내",
+      "sender_name": "그룹웨어",
+      "sender_email": "system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-02T16:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0162",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-03T09:12:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0213",
+      "subject": "RE: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "이수민 / SuminLee",
+      "sender_email": "smlee@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-03T10:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0010",
+      "subject": "Fw: 워크숍 관련 안내드립니다",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-03T18:20:00+09:00",
+      "body": "집결 시간 관련 재공지드립니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "B"
+    },
+    {
+      "id": "m0098",
+      "subject": "〔총무팀〕1차 사옥 정기 소방점검 실시 안내",
+      "sender_name": "한지우 / JiwooHan",
+      "sender_email": "jwhan@hangyeol.co.kr",
+      "sender_dept": "경영지원부",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-05T13:30:00+09:00",
+      "body": "전사 공지사항입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0372",
+      "subject": "Re: 회의 일정 관련 문의드립니다",
+      "sender_name": "최민석 / MinseokChoi",
+      "sender_email": "mschoi@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-06T14:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0063",
+      "subject": "Re: 〔보고〕주간 업무 현황 공유",
+      "sender_name": "김도현 / DohyunKim",
+      "sender_email": "dhkim@hangyeol.co.kr",
+      "sender_dept": "디지털전략팀",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-06T17:20:00+09:00",
+      "body": "업무 관련 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0241",
+      "subject": "〔러닝포털〕미이수 과정 안내입니다",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-07T15:20:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0012",
+      "subject": "〔러닝포털〕〔2026 필수〕ESG경영 학습현황 안내입니다.",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-08T10:41:00+09:00",
+      "body": "〔2026 필수〕ESG경영 과정 학습현황을 안내드립니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "C"
+    },
+    {
+      "id": "m0253",
+      "subject": "〔정보보호센터〕〔필수〕PC 보안점검 미실시 안내",
+      "sender_name": "정보보호센터",
+      "sender_email": "security@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-08T11:30:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    },
+    {
+      "id": "m0016",
+      "subject": "〔러닝포털〕〔2026 필수〕윤리경영 학습현황 안내입니다.",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-08T17:38:00+09:00",
+      "body": "〔2026 필수〕윤리경영 과정 학습현황을 안내드립니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "C"
+    },
+    {
+      "id": "m0014",
+      "subject": "〔러닝포털〕〔2026 법정필수〕금융권 정보보호 (내근·위촉직) 학습현황 안내입니다.",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-08T17:44:00+09:00",
+      "body": "〔2026 법정필수〕금융권 정보보호 (내근·위촉직) 과정 학습현황을 안내드립니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "C"
+    },
+    {
+      "id": "m0018",
+      "subject": "〔러닝포털〕기획자를 위한 챗GPT 활용법 학습현황 안내입니다.",
+      "sender_name": "러닝포털",
+      "sender_email": "no-reply@learningportal.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-08T17:47:00+09:00",
+      "body": "기획자를 위한 챗GPT 활용법 과정 학습현황을 안내드립니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": "C"
+    },
+    {
+      "id": "m0187",
+      "subject": "〔인사시스템〕연차 사용 촉진 안내",
+      "sender_name": "인사시스템",
+      "sender_email": "hr-system@hangyeol.co.kr",
+      "sender_dept": "시스템",
+      "recipients": [
+        "jhpark@hangyeol.co.kr"
+      ],
+      "sent_at": "2026-09-08T18:00:00+09:00",
+      "body": "시스템 자동발송 메일입니다.",
+      "attachments": [],
+      "reply_to": null,
+      "_case": null
+    }
+  ],
+  "attachments": [
+    {
+      "id": "a001",
+      "filename": "N_CX_UIUX_견적취합_v3.xlsx",
+      "path": "data/attachments/a001.xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "id": "a002",
+      "filename": "UIUX_요구사항정의서_v2.pdf",
+      "path": "data/attachments/a002.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a003",
+      "filename": "N_CX_UIUX_견적취합_v1.xlsx",
+      "path": "data/attachments/a003.xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "id": "a004",
+      "filename": "NextW_버스배차_최종명단.pdf",
+      "path": "data/attachments/a004.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a005",
+      "filename": "NextW_Workshop_초대장.pdf",
+      "path": "data/attachments/a005.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a006",
+      "filename": "D-MIG_이관대상_테이블목록.xlsx",
+      "path": "data/attachments/a006.xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "id": "a007",
+      "filename": "D-MIG_이관비용_견적서.xlsx",
+      "path": "data/attachments/a007.xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "id": "a008",
+      "filename": "D-MIG_리허설결과보고.pdf",
+      "path": "data/attachments/a008.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a009",
+      "filename": "ESG공시_1차초안.pdf",
+      "path": "data/attachments/a009.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a010",
+      "filename": "ESG공시_최종안_v2.pdf",
+      "path": "data/attachments/a010.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a011",
+      "filename": "고객채널TF_회의록_0312.pdf",
+      "path": "data/attachments/a011.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a012",
+      "filename": "고객채널TF_중간보고.pdf",
+      "path": "data/attachments/a012.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a013",
+      "filename": "2026_상반기_실적취합.xlsx",
+      "path": "data/attachments/a013.xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "id": "a014",
+      "filename": "보안점검_취약점조치요청.pdf",
+      "path": "data/attachments/a014.pdf",
+      "mime": "application/pdf"
+    },
+    {
+      "id": "a015",
+      "filename": "멘토멘티_육성계획서_양식.xlsx",
+      "path": "data/attachments/a015.xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "id": "a016",
+      "filename": "멘토멘티_결과보고서.pdf",
+      "path": "data/attachments/a016.pdf",
+      "mime": "application/pdf"
+    }
+  ]
+}

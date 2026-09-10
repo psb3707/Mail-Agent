@@ -1,0 +1,17 @@
+[project]
+name = "mail-agent"
+version = "0.1.0"
+description = "메일함을 도착순이 아니라 건(件) 단위로 보게 하는 레이어"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "jinja2>=3.1",
+    "anthropic>=0.40",
+    "pypdf>=5.0",
+    "openpyxl>=3.1",
+    "reportlab>=4.2",
+]
+
+[tool.setuptools]
+packages = ["app"]
