@@ -1,0 +1,97 @@
+name: PM Review
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pm-review-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  review:
+    name: Review main from a PM perspective
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out the full history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install review and project dependencies
+        run: >-
+          python -m pip install
+          pytest
+          "anthropic>=0.40"
+          "fastapi>=0.115"
+          "uvicorn[standard]>=0.32"
+          "jinja2>=3.1"
+          "pypdf>=5.0"
+          "openpyxl>=3.1"
+          "reportlab>=4.2"
+
+      - name: Run project tests
+        id: tests
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest -q 2>&1 | tee .pm-review-pytest.txt
+
+      - name: Generate PM review
+        id: generate
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+        run: >-
+          python scripts/pm_review.py generate
+          --before "${{ github.event.before }}"
+          --after "${{ github.sha }}"
+          --repository "${{ github.repository }}"
+          --actor "${{ github.actor }}"
+          --event "${{ github.event_name }}"
+          --test-status "${{ steps.tests.outcome }}"
+          --test-output .pm-review-pytest.txt
+          --output pm-review.md
+
+      - name: Upload Markdown review
+        if: always() && hashFiles('pm-review.md') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: pm-review-${{ github.sha }}
+          path: pm-review.md
+          retention-days: 30
+
+      - name: Post review on the pushed commit
+        if: always() && hashFiles('pm-review.md') != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_API_URL: ${{ github.api_url }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: >-
+          python scripts/pm_review.py post
+          --review pm-review.md
+          --repository "${{ github.repository }}"
+          --sha "${{ github.sha }}"
+
+      - name: Fail when review generation failed
+        if: steps.generate.outcome == 'failure'
+        run: |
+          echo "PM review generation failed. Read the commit comment or workflow artifact for details."
+          exit 1
+
