@@ -76,22 +76,13 @@ jobs:
           path: pm-review.md
           retention-days: 30
 
-      - name: Post review on the pushed commit
+      - name: Publish review to the workflow summary
         if: always() && hashFiles('pm-review.md') != ''
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_API_URL: ${{ github.api_url }}
-          GITHUB_SERVER_URL: ${{ github.server_url }}
-          GITHUB_RUN_ID: ${{ github.run_id }}
-        run: >-
-          python scripts/pm_review.py post
-          --review pm-review.md
-          --repository "${{ github.repository }}"
-          --sha "${{ github.sha }}"
+        shell: bash
+        run: cat pm-review.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Fail when review generation failed
         if: steps.generate.outcome == 'failure'
         run: |
-          echo "PM review generation failed. Read the commit comment or workflow artifact for details."
+          echo "PM review generation failed. Read the workflow summary or artifact for details."
           exit 1
-
