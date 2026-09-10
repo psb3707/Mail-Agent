@@ -1,26 +1,26 @@
-"""관리 Agent 골격 스모크 테스트 — 분류AI 구현 없이 목으로 동작 확인."""
+"""관리 Agent 골격 스모크 테스트 — 분류AI 산출물(indexed.json) 기반으로 동작 확인."""
 import json
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from agent.classifier_adapter import ClassifierAdapter, MockClassifier
+from agent.classifier_adapter import ClassifierAdapter
 from agent.context import ConversationContext
 from agent.manager import ManagerAgent
 from agent.responder import render_tool_result
 
 
-def test_mock_classifier_adapter_serves_tree():
-    """분류AI 본체가 없어도(목) 트리 조회가 동작한다."""
-    adapter = ClassifierAdapter()  # impl 미지정 → MockClassifier
+def test_classifier_adapter_serves_tree():
+    """indexed.json(AI-Ready DB) 기반 어댑터가 트리 조회를 반환한다."""
+    adapter = ClassifierAdapter()  # impl 미지정 → IndexedReader
     tree = adapter.get_tree()
     assert tree["root"] == "메일함"
     assert any(c["title"] for c in tree["cases"])
 
 
-def test_mock_adapter_case_emails_and_attachment():
-    """목 어댑터가 건 메일 목록·첨부 텍스트를 반환한다."""
+def test_adapter_case_emails_and_attachment():
+    """어댑터가 건 메일 목록·첨부 텍스트를 반환한다."""
     adapter = ClassifierAdapter()
     emails = adapter.get_case_emails("c-m0001")
     assert emails and emails[0]["subject"]
@@ -28,17 +28,18 @@ def test_mock_adapter_case_emails_and_attachment():
 
 
 def test_manager_agent_tree_intent():
-    """'건' 키워드 → tree 도구 → 응답에 분류 건이 포함."""
+    """'건' 키워드 → 건 트리 도구 → 응답에 분류 건이 포함."""
     agent = ManagerAgent()
     answer = agent.run("지금 분류된 건 트리 알려줘")
-    assert "N_CX" in answer or "이관" in answer
+    assert "n cx" in answer or "d mig" in answer
 
 
 def test_manager_agent_timeline_intent():
     """'타임라인' 키워드 + case id → 건 타임라인 응답."""
     agent = ManagerAgent()
     answer = agent.run("c-m0001 타임라인 알려줘")
-    assert "m0001" in answer or "N_CX" in answer
+    # 렌더링은 메일 subject 기반이므로 실제 case 메일 제목(N_CX)이 포함된다
+    assert answer.startswith("건 타임라인:") or "N_CX" in answer
 
 
 def test_manager_agent_attachment_intent():

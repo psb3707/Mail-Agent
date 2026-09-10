@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from agent.classifier_adapter import ClassifierAdapter, MockClassifier
+from agent.classifier_adapter import ClassifierAdapter
 from agent.context import ConversationContext
 from agent.harness import ToolHarness
 from agent.orchestrator import Orchestrator
@@ -27,7 +27,7 @@ def test_llm_tool_call_runs_harness_and_returns():
 
     orch = Orchestrator(harness, llm, context=ctx, max_steps=3)
     answer = orch.run("건 트리 알려줘")
-    assert "N_CX" in answer or "이관" in answer
+    assert "n cx" in answer or "d mig" in answer
     assert ctx.steps_history(), "도구 실행 이력이 남아야 함"
     assert ctx.steps_history()[-1]["tool"] == "get_tree"
 
@@ -91,4 +91,4 @@ def test_manager_agent_still_works_with_orchestrator():
     """ManagerAgent가 오케스트레이터로 리팩터돼도 기존 사용법(메시지→문자열)이 동작."""
     agent = ManagerAgent(llm_call=lambda prompt, **kw: '{"tool": "get_tree", "arguments": {}}')
     answer = agent.run("건 트리 알려줘")
-    assert "N_CX" in answer or "이관" in answer
+    assert "n cx" in answer or "d mig" in answer

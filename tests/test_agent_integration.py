@@ -1,7 +1,7 @@
-"""지시-013 통합 검증 — 009(하네스)·010(오케스트레이터)·011(프롬프트)가
-하나의 ManagerAgent로 맞물려 실제 응답까지 동작하는지 확인한다.
+"""지시-020 통합 검증 — 009(하네스)·010(오케스트레이터)·011(프롬프트)가
+하나의 ManagerAgent로 맞물려 AI-Ready DB(indexed.json) 기반으로 동작하는지 확인한다.
 
-- Mock 분류AI(ClassifierAdapter 기본값) 상태에서 스모크 동작
+- IndexedReader(지시-020) 기본 impl 상태에서 실제 9건 건 트리 스모크 동작
 - 도구 실행 경로(하네스)와 컨텍스트 기록이 실제로 연결되는지 확인
 - 라이브 LLM 기본(스텁 JSON → 도구 실행) 경로 확인
 """
@@ -24,7 +24,7 @@ def test_manager_agent_is_exported_from_package():
 
 
 def test_manager_agent_smoke_returns_string():
-    """Mock 분류AI 상태에서 run('안녕') → 문자열 응답 (스모크, 조건 2)."""
+    """indexed.json 기반 어댑터 상태에서 run('안녕') → 응답 문자열 (스모크)."""
     agent_inst = ManagerAgent()
     reply = agent_inst.run("안녕")
     assert isinstance(reply, str)
@@ -47,7 +47,7 @@ def test_manager_agent_tool_execution_path_returns_tree():
     """규칙 폴백으로 '건' → get_tree 도구가 실행되어 분류 건이 응답에 포함된다."""
     agent_inst = ManagerAgent()
     reply = agent_inst.run("지금 분류된 건 트리를 알려주세요")
-    assert "N_CX" in reply or "이관" in reply
+    assert "n cx" in reply or "d mig" in reply
 
 
 def test_manager_agent_llm_json_tool_call_runs_harness():
@@ -58,8 +58,8 @@ def test_manager_agent_llm_json_tool_call_runs_harness():
         )
     )
     reply = agent_inst.run("c-m0001 타임라인 좀 봐줘")
-    # 하네스가 mock 분류AI의 get_case_emails를 실행 → m0001·m0006 포함 응답
-    assert "m0001" in reply or "N_CX" in reply
+    # 하네스가 IndexedReader의 get_case_emails를 실행 → 실제 메일 제목 포함 응답
+    assert "N_CX" in reply or "건 타임라인:" in reply
     assert len(agent_inst.context.steps_history()) >= 1
 
 

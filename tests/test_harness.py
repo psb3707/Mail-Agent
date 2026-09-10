@@ -10,8 +10,8 @@ from agent.skills import Skill, default_skills
 
 
 def _harness() -> ToolHarness:
-    """Mock 분류AI 어댑터로 기본 스킬 4개를 등록한 하네스."""
-    clf = ClassifierAdapter()  # 미지정 → MockClassifier
+    """indexed.json 기반 분류AI 어댑터로 기본 스킬 4개를 등록한 하네스."""
+    clf = ClassifierAdapter()  # 미지정 → IndexedReader
     return ToolHarness(default_skills(clf))
 
 
@@ -30,7 +30,7 @@ def test_default_skills_registered():
 
 
 def test_execute_get_tree_returns_dict():
-    """execute('get_tree') → MockClassifier의 트리 dict 반환."""
+    """execute('get_tree') → IndexedReader의 트리 dict 반환."""
     h = _harness()
     result = h.execute("get_tree")
     assert isinstance(result, dict)
