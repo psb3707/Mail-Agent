@@ -227,7 +227,13 @@
           method: 'POST', headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({new_mail: {id: 'm9999', subject: subj, body: '추가 요청드립니다.', sender_dept: '디지털전략팀'}})
         }).then(x => x.json());
-        box.innerHTML = '배정: <b>' + esc(r.case_id) + '</b>' + (r.case_id === 'NEW_CASE' ? ' (새 건 시작)' : ' (기존 건 편입)');
+        const d = r.decision;
+        let label;
+        if (d === 'existing') label = '기존 건 편입 → ' + esc(r.case_id);
+        else if (d === 'new_case') label = '새 건 시작 (미배정)';
+        else if (d === 'non_case') label = '비건 처리 (알림/기타)';
+        else label = '배정: ' + esc(r.case_id || '(없음)');
+        box.innerHTML = '분류: <b>' + label + '</b>';
       } catch (e) {
         box.textContent = '오류: ' + e.message;
       }
