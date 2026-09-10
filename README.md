@@ -17,6 +17,16 @@
 | `tests/test_build_index.py` | ✅ 정합성 · 라벨 비의존 · 순서 무관 · 멱등 · 최신본 검증 |
 | `app/` (FastAPI 단일 페이지) | ✅ 재조립·질의·버전·신메일 분류 라우트 구현 |
 
+## 실행 방법 (로컬 시연, Windows)
+
+```powershell
+pip install -e .                        # 1. 설치
+copy .env.example .env                  # 2. .env 열어 OPENROUTER_API_KEY 입력 (키가 없어도 폴백으로 시연 가능)
+.\run.ps1                               # 3. 실행 → http://localhost:8765
+```
+
+- `.env`에 키를 넣으면 라이브 LLM 호출, 비워 두면 캐시 폴백으로 동작합니다.
+
 ## 데이터 재생성
 
 ```bash

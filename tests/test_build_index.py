@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from scripts.build_index import build_index
 
 def _load():
-    d = json.loads(Path("data/mails.json").read_text())
+    d = json.loads(Path("data/mails.json").read_text(encoding="utf-8"))
     return d["mails"], d["attachments"]
 
 def test_build_index_creates_cases():

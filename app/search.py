@@ -55,13 +55,27 @@ def _keyword_candidates(question: str, corpus: list[dict], top_k: int = 6) -> li
 
 
 def _fallback(question: str) -> dict:
-    """인메모리 폴백: 사전 계산 정답이 질문에 포함되면 반환. 없으면 기본 메시지."""
-    for entry in _FALLBACK_ANSWERS:
-        if entry["question"] in question:
+    """캐시 폴백: data/demo_cache.json(지시-007)을 읽어 정답을 찾는다.
+
+    - 파일이 없거나 질문이 매치 안 되면 기본 메시지로 폴백.
+    - 라이브 LLM이 기본 경로이며, 이 함수는 네트워크/API 장애 시에만 호출된다.
+    """
+    answers = _FALLBACK_ANSWERS
+    cache_path = DATA / "demo_cache.json"
+    try:
+        cached = json.loads(cache_path.read_text(encoding="utf-8"))
+        file_answers = cached.get("answers", [])
+        if file_answers:
+            answers = file_answers
+    except Exception:
+        pass  # 파일 없음/손상 → 하드코딩 폴백
+
+    for entry in answers:
+        if entry.get("question", "") in question:
             return {
-                "answer": entry["answer"],
-                "attachment": entry["attachment"],
-                "evidence": [],
+                "answer": entry.get("answer", ""),
+                "attachment": entry.get("attachment", None),
+                "evidence": entry.get("evidence", []),
                 "mail_ids": [],
                 "cached": True,
             }
@@ -91,6 +105,20 @@ def _evidence_lines(text: str, limit: int = 3) -> list[str]:
     return scored[:limit]
 
 
+def _find_attachment_in_answer(answer: str, corpus: list[dict]) -> dict | None:
+    """LLM 답변에서 언급된 첨부 파일명을 코퍼스에서 찾는다.
+
+    answer_question은 LLM 답변을 그대로 answer로 쓰므로, LLM이 '이 첨부가 정답'이라
+    답했다면 attachment·evidence도 그 첨부 기준으로 갱신해야 '왜 이것인가'가 성립한다.
+    """
+    if not answer:
+        return None
+    for item in corpus:
+        if item["file"] in answer:
+            return item
+    return None
+
+
 def answer_question(question: str, indexed: dict, llm_call) -> dict:
     """자연어 질문 → 정답 첨부 + '왜 이것인가' 근거 (장면 3)."""
     corpus = _corpus(indexed)
@@ -110,10 +138,11 @@ def answer_question(question: str, indexed: dict, llm_call) -> dict:
     except Exception:
         return _fallback(question)
 
+    chosen = _find_attachment_in_answer(answer, corpus) or (cands[0] if cands else None)
     return {
         "answer": answer,
-        "attachment": cands[0]["file"] if cands else None,
-        "evidence": _evidence_lines(cands[0]["text"]) if cands else [],
-        "mail_ids": cands[0]["mail_ids"] if cands else [],
+        "attachment": chosen["file"] if chosen else None,
+        "evidence": _evidence_lines(chosen["text"]) if chosen else [],
+        "mail_ids": chosen["mail_ids"] if chosen else [],
         "cached": cached,
     }
