@@ -11,13 +11,17 @@
 import json
 from pathlib import Path
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, BackgroundTasks, HTTPException
+from pydantic import BaseModel
+from typing import Literal
+from uuid import UUID
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 
 from app import grouping, llm, versions
 from app.answer_format import format_answer
 from agent.manager import ManagerAgent
+from app.inbox import MailboxStore
 
 BASE = Path(__file__).resolve().parent
 DATA = BASE.parent / "data"
@@ -28,22 +32,54 @@ app = FastAPI(title="mail-agent PoC")
 # 서버 시작 시 사전 계산 결과를 인메모리로 로드 (읽기 전용)
 _indexed = json.loads((DATA / "indexed.json").read_text(encoding="utf-8"))
 
-# 신메일 증분 편입 시연용 인메모리 상태 (영속화하지 않음)
-state = {
-    "indexed": _indexed,
-    "new_mails": [],
-}
+_raw = json.loads((DATA / "mails.json").read_text(encoding="utf-8"))
+mailbox = MailboxStore(_indexed, _raw["mails"])
+
+
+class ReceiveRequest(BaseModel):
+    event_id: UUID
+    scenario: Literal["existing", "new_case", "alert"] = "existing"
+
+
+@app.post("/inbox/receive", status_code=202)
+def receive(payload: ReceiveRequest, background_tasks: BackgroundTasks):
+    event_id = str(payload.event_id)
+    try:
+        event = mailbox.begin(event_id, payload.scenario)
+    except ValueError as exc:
+        raise HTTPException(409, str(exc)) from exc
+    if event["status"] == "received":
+        background_tasks.add_task(mailbox.process, event_id, llm.llm_call)
+    return event
+
+
+@app.get("/inbox/events/{event_id}")
+def receive_status(event_id: UUID):
+    event = mailbox.event(str(event_id))
+    if event is None:
+        raise HTTPException(404, "수신 이벤트를 찾을 수 없어요.")
+    return event
+
+
+@app.post("/inbox/mails/{mail_id}/read")
+def read_mail(mail_id: str):
+    if not mailbox.mark_read(mail_id):
+        raise HTTPException(404, "메일을 찾을 수 없어요.")
+    return {"id": mail_id, "is_new": False}
 
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    cards = grouping.reassemble(state["indexed"])
-    version_rows = versions.version_compare(state["indexed"])
-    non_cases = state["indexed"].get("non_cases", [])
+    indexed = mailbox.snapshot()
+    cards = grouping.reassemble(indexed)
+    for card in cards:
+        card["new_count"] = sum(bool(m.get("_is_new")) for m in card["mails"])
+    version_rows = versions.version_compare(indexed)
+    non_cases = indexed.get("non_cases", [])
     alerts = [n for n in non_cases if n.get("type") == "alert"]
     misc = [n for n in non_cases if n.get("type") != "alert"]
     raw = json.loads((DATA / "mails.json").read_text(encoding="utf-8"))
-    mails = sorted(raw["mails"], key=lambda m: m.get("sent_at", ""), reverse=True)
+    mails = sorted(indexed["mails"], key=lambda m: m.get("sent_at", ""), reverse=True)
     filenames = {a["id"]: a["filename"] for a in raw["attachments"]}
     # starlette 1.6.0 신형 시그니처: TemplateResponse(request, name, context)
     return templates.TemplateResponse(
@@ -58,7 +94,9 @@ async def index(request: Request):
             "version_rows": version_rows,
             "alerts": alerts,
             "misc": misc,
-            "new_mails": state["new_mails"],
+            "new_mails": [m for m in mails if m.get("_is_new")],
+            "recent_received": [m for m in mails if m["id"].startswith("m-inbound-")][:5],
+            "latest_event": mailbox.latest_event(),
         },
     )
 
@@ -71,30 +109,28 @@ def ask(payload: dict):
             {"answer": "질문을 입력해 주세요.", "attachment": None,
              "evidence": [], "mail_ids": [], "cached": False}
         )
-    result = ManagerAgent(indexed=state["indexed"], llm_call=llm.llm_call).run_result(question)
+    indexed = mailbox.snapshot()
+    result = ManagerAgent(indexed=indexed, llm_call=llm.llm_call).run_result(question)
     # Source links always resolve against the actual read-only mailbox.
-    mails = grouping._mails_from(state["indexed"])
+    mails = grouping._mails_from(indexed)
     if result.get("attachment") and not result.get("mail_ids"):
-        attachments = state["indexed"].get("attachments", [])
+        attachments = indexed.get("attachments", [])
         aids = {a["id"] for a in attachments if a.get("filename") == result["attachment"] or a["id"] == result["attachment"]}
         result["mail_ids"] = [mid for mid, m in mails.items() if aids.intersection(m.get("attachments", []))]
     return JSONResponse(format_answer(result, mails))
 
 
 @app.post("/classify")
-async def classify(payload: dict):
+def classify(payload: dict):
+    # Backward-compatible preview; receiving and saving uses /inbox/receive.
     new_mail = payload.get("new_mail") or {}
     if not new_mail:
         return JSONResponse({"case_id": "", "error": "new_mail이 필요합니다."})
-    result = grouping.classify_new_mail(new_mail, state["indexed"], llm.llm_call)
-    # 시연용 인메모리 기록 (영속화 없음)
-    new_mail = dict(new_mail)
-    new_mail["_assigned_case"] = result.get("case_id", "")
-    new_mail["_decision"] = result.get("decision", "")
-    state["new_mails"].append(new_mail)
-    return JSONResponse({"decision": result.get("decision"), "case_id": result.get("case_id"), "assigned": new_mail})
+    result = grouping.classify_new_mail(new_mail, mailbox.snapshot(), llm.llm_call)
+    assigned = {**new_mail, "_assigned_case": result.get("case_id", ""), "_decision": result.get("decision", "")}
+    return {**result, "assigned": assigned}
 
 
 @app.get("/versions")
 async def versions_route():
-    return JSONResponse(versions.version_compare(state["indexed"]))
+    return JSONResponse(versions.version_compare(mailbox.snapshot()))

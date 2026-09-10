@@ -1418,6 +1418,19 @@ footer  {
 .mail-link{color:var(--primary);font-weight:600;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 .mail-link:hover{color:var(--hover)}
 .mail-row.mail-selected{background:var(--tint);border-radius:8px;outline:2px solid var(--primary);outline-offset:-2px;scroll-margin:16px}
+
+.receive-panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:24px}
+.receive-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.receive-heading{display:flex;align-items:center;gap:12px}.receive-heading p{font-size:12px;color:var(--muted)}
+.receive-controls{display:flex;gap:8px;flex-wrap:wrap}.receive-controls select{font:inherit;color:var(--ink);padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--canvas)}
+.receive-steps{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.receive-step{font-size:12px;color:var(--muted);background:var(--soft);border-radius:6px;padding:4px 12px}
+.receive-step.active{color:var(--primary);background:var(--tint)}.receive-step.done{color:var(--success);background:var(--success-bg)}
+#receive-result{font-size:14px;margin-top:12px;overflow-wrap:anywhere}#receive-result:empty{display:none}
+.new-badge{display:inline-block;font-size:12px;font-weight:700;color:var(--primary);background:var(--tint);padding:0 6px;border-radius:4px;margin-left:8px;vertical-align:middle;white-space:nowrap}
+.recent-received{margin:0 0 24px;padding:16px 24px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.recent-received h2{font-size:16px;margin-bottom:12px}.recent-received-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line)}
+.recent-received-row .mail-link{font-size:14px}.recent-received-row .meta{white-space:nowrap}
+@media(max-width:650px){.receive-panel{padding:16px}.receive-controls{width:100%}.receive-controls select{flex:1;min-width:0}.recent-received{padding:16px}.recent-received-row{align-items:flex-start}.recent-received-row .meta{display:none}}
 </style>
 </head>
 <body>
@@ -1441,6 +1454,12 @@ footer  {
 <header class="topbar"><div class="crumb">워크스페이스 <span>/</span> <b id="breadcrumb">업무 모아보기</b></div><div class="topbar-right"><span class="badge">DEMO WORKSPACE</span><span class="avatar" aria-label="사용자">ME</span></div></header>
 <main id="main">
 <div class="page-heading"><div><div class="eyebrow" style="margin-bottom:8px">LESS SEARCHING, MORE CONTEXT</div><h1>흩어진 메일, 하나의 업무로.</h1><p>메일 속 대화와 문서를 연결해, 지금 필요한 맥락만 모았습니다.</p></div><span class="date-note">MAIL AGENT / 업무 중심 메일함</span></div>
+<section class="receive-panel" aria-label="메일 수신 시연">
+<div class="receive-bar"><div class="receive-heading"><span class="folder-icon">{{ icon('mail') }}</span><div><h2>새 메일이 오면, 업무에 바로 연결.</h2><p>가상 수신 이벤트 · 자동 분류 후 현재 서버 세션에 저장됩니다.</p></div></div>
+<div class="receive-controls"><select id="receive-scenario" aria-label="수신 시나리오"><option value="existing">기존 업무 · N_CX 후속 메일</option><option value="new_case">새 업무 · AURORA 프로젝트</option><option value="alert">알림 · PC 보안점검</option></select><button id="receive-btn" class="primary">새 메일 수신</button></div></div>
+<div class="receive-steps" aria-label="수신 처리 단계"><span class="receive-step" data-stage="received">1 수신</span><span class="receive-step" data-stage="classifying">2 자동 분류</span><span class="receive-step" data-stage="saved">3 저장 완료</span><span class="receive-step" data-stage="new">4 NEW 표시</span></div>
+<div id="receive-result" role="status" aria-live="polite"></div></section>
+<section id="recent-received" class="recent-received" {% if not recent_received %}hidden{% endif %}><h2>최근 수신 메일 <span class="badge">새 메일 {{ new_mails|length }}통</span></h2>{% for m in recent_received %}<div class="recent-received-row"><div><a class="mail-link" href="/#mail-{{ m.id }}">{{ m.subject }} ↗</a>{% if m.get('_is_new') %}<span class="new-badge" data-new-mail="{{ m.id }}">NEW</span>{% endif %}</div><span class="meta">{{ m.sender_name }} · {{ m.sent_at[11:16] }}</span></div>{% endfor %}</section>
 <section class="stats" aria-label="메일함 요약">
 <div class="stat"><div class="stat-label">{{ icon('mail') }}전체 메일</div><div class="stat-value">{{ mails|length }}<span>통의 메일</span></div></div>
 <div class="stat"><div class="stat-label">{{ icon('grid') }}연결된 업무</div><div class="stat-value">{{ cards|length }}<span>건 · 메일 {{ grouped_count }}통</span></div></div>
@@ -1451,25 +1470,28 @@ footer  {
 <div class="section-head"><h2 id="section-title">업무 모아보기 <span class="muted" style="font-weight:400">{{ cards|length }}</span></h2><div class="segmented" aria-label="메일 보기 방식"><button id="btn-arrival" aria-pressed="false">도착순</button><button id="btn-case" class="active" aria-pressed="true">건 단위</button></div></div>
 <section id="case-view" class="view"><p class="section-note">같은 업무의 메일을 한곳에. 최신 대화부터 확인하세요.</p><div class="cards">
 {% for card in cards %}
-<article class="card"><div class="card-top"><span class="folder-icon">{{ icon('folder') }}</span><span class="badge">{{ card.mail_type or '업무' }}</span></div><h3>{{ card.title }}</h3><p class="meta">{{ card.period[0][:10] if card.period else '' }} — {{ card.period[1][:10] if card.period else '' }}</p><div class="latest"><div class="latest-label"><span>최근 대화 · {{ card.latest_sender.split(" / ")[0] }}</span><span class="muted">{{ card.latest_at[5:10] if card.latest_at else '' }}</span></div><p class="latest-body">{{ card.latest_body or '아직 대화가 없습니다.' }}</p></div><div class="card-footer"><span>메일 {{ card.mails|length }} · 첨부 {{ card.attachments|length }}</span><button class="text-btn" data-detail="{{ loop.index0 }}" aria-label="{{ card.title }} 타임라인 보기">타임라인 보기 ↗</button></div></article>
+<article class="card"><div class="card-top"><span class="folder-icon">{{ icon('folder') }}</span><span class="badge">{{ card.mail_type or '업무' }}</span></div><h3>{{ card.title }}{% if card.new_count %}<span class="new-badge">NEW {{ card.new_count }}</span>{% endif %}</h3><p class="meta">{{ card.period[0][:10] if card.period else '' }} — {{ card.period[1][:10] if card.period else '' }}</p><div class="latest"><div class="latest-label"><span>최근 대화 · {{ card.latest_sender.split(" / ")[0] }}</span><span class="muted">{{ card.latest_at[5:10] if card.latest_at else '' }}</span></div><p class="latest-body">{{ card.latest_body or '아직 대화가 없습니다.' }}</p></div><div class="card-footer"><span>메일 {{ card.mails|length }} · 첨부 {{ card.attachments|length }}</span><button class="text-btn" data-detail="{{ loop.index0 }}" aria-label="{{ card.title }} 타임라인 보기">타임라인 보기 ↗</button></div></article>
 {% else %}<div class="empty">연결된 업무가 없습니다.</div>{% endfor %}
 </div></section>
-<section id="arrival-view" class="view" hidden><p class="section-note">도착한 순서대로 보는 전체 메일입니다. 제목으로 검색할 수 있습니다.</p><div class="panel"><label class="searchbar" style="display:block"><input id="mail-search" placeholder="메일 제목 검색 · 예: N_CX, 견적" aria-label="메일 제목 검색"></label><p id="mail-navigation-status" class="helper" role="status"></p><p id="mail-count" class="meta" role="status">전체 {{ mails|length }}통</p><div class="mail-list" id="arrival-list">{% for m in mails %}<article class="mail-row" id="mail-{{ m.id }}" data-subject="{{ m.subject }}"><span class="mail-avatar">{{ m.sender_name[:1] }}</span><span>{{ m.sender_name }}<br><small>{{ m.sender_dept }}</small></span><details><summary class="mail-subject">{{ m.subject }}</summary><p class="mail-body">{{ m.body }}</p>{% for aid in m.attachments %}<span class="attachment">{{ filenames.get(aid,aid) }}</span>{% endfor %}</details><small>{{ m.sent_at[5:10] }}</small></article>{% endfor %}</div><p id="mail-empty" class="empty" hidden>일치하는 제목이 없습니다. 다른 검색어를 입력해 주세요.</p></div></section>
+<section id="arrival-view" class="view" hidden><p class="section-note">도착한 순서대로 보는 전체 메일입니다. 제목으로 검색할 수 있습니다.</p><div class="panel"><label class="searchbar" style="display:block"><input id="mail-search" placeholder="메일 제목 검색 · 예: N_CX, 견적" aria-label="메일 제목 검색"></label><p id="mail-navigation-status" class="helper" role="status"></p><p id="mail-count" class="meta" role="status">전체 {{ mails|length }}통</p><div class="mail-list" id="arrival-list">{% for m in mails %}<article class="mail-row" id="mail-{{ m.id }}" data-new="{{ 'true' if m.get('_is_new') else 'false' }}" data-subject="{{ m.subject }}"><span class="mail-avatar">{{ m.sender_name[:1] }}</span><span>{{ m.sender_name }}<br><small>{{ m.sender_dept }}</small></span><details><summary class="mail-subject">{{ m.subject }}{% if m.get('_is_new') %}<span class="new-badge" data-new-mail="{{ m.id }}">NEW</span>{% endif %}</summary><p class="mail-body">{{ m.body }}</p>{% for aid in m.attachments %}<span class="attachment">{{ filenames.get(aid,aid) }}</span>{% endfor %}</details><small>{{ m.sent_at[5:10] }}</small></article>{% endfor %}</div><p id="mail-empty" class="empty" hidden>일치하는 제목이 없습니다. 다른 검색어를 입력해 주세요.</p></div></section>
 <section id="versions-view" class="view" hidden><p class="section-note">같은 문서의 버전을 모으고, 최신본과 변경 내용을 확인합니다.</p>{% for v in version_rows %}<article class="panel"><span class="badge green">최신본 확인</span><h2 style="margin-top:12px">{{ v.doc }}</h2><div class="version-files">{% for aid in v.ids %}<div class="version-file {{ 'latest-file' if aid == v.latest else '' }}">{{ icon('file') }} <span class="badge {{ 'green' if aid == v.latest else '' }}">{{ '최신 버전' if aid == v.latest else '이전 버전' }}</span><p>{{ filenames.get(aid,aid) }}</p></div>{% endfor %}</div><h3 style="margin-bottom:12px">달라진 내용</h3><div class="diff">{{ v.diff_summary }}</div>{% if v.evidence %}<details style="margin-top:16px"><summary>문서 내용 근거 펼치기</summary>{% for e in v.evidence %}<div class="evidence" style="white-space:pre-wrap">{{ e }}</div>{% endfor %}</details>{% endif %}</article>{% else %}<div class="panel empty">비교할 문서 버전이 없습니다.</div>{% endfor %}</section>
 <section id="notifications-view" class="view" hidden><p class="section-note">업무와 별도로 확인할 반복 알림과 공지입니다.</p>{% for label, items in [('반복 알림', alerts), ('기타 공지 및 행정', misc)] %}<div class="panel"><details><summary><strong>{{ label }}</strong> <span class="badge">{{ items|length }}통</span></summary><div class="mail-list">{% for item in items %}<div style="padding:12px 0;border-bottom:1px solid var(--line)">{{ item.subject }}</div>{% else %}<p class="empty">항목이 없습니다.</p>{% endfor %}</div></details></div>{% endfor %}</section>
-<section id="classify-view" class="view" hidden><p class="section-note">새 메일이 어느 업무로 연결되는지 확인해 보세요.</p><div class="panel"><span class="folder-icon">{{ icon('spark') }}</span><h2 style="margin-top:16px">새로운 메일도, 알맞은 업무로.</h2><p class="muted" style="margin-top:8px">기존 업무에 연결하거나, 새 업무 또는 알림으로 분류합니다.</p><form id="classify-form"><label for="newmail-subj" style="display:block;margin-top:24px">새 메일 제목</label><div class="form-row" style="margin-top:8px"><input id="newmail-subj" required placeholder="예: 〔Project N_CX〕2차 견적 요청"><button class="primary" id="classify-btn" style="white-space:nowrap">분류하기</button></div></form><div id="classify-result" role="status" aria-live="polite" class="diff">제목을 입력하면 분류 결과를 확인할 수 있습니다.</div><p class="helper">시연 입력은 현재 서버 세션에만 보관됩니다.</p></div></section>
+<section id="classify-view" class="view" hidden><p class="section-note">새 메일이 어느 업무로 연결되는지 확인해 보세요.</p><div class="panel"><span class="folder-icon">{{ icon('spark') }}</span><h2 style="margin-top:16px">새로운 메일도, 알맞은 업무로.</h2><p class="muted" style="margin-top:8px">기존 업무에 연결하거나, 새 업무 또는 알림으로 분류합니다.</p><form id="classify-form"><label for="newmail-subj" style="display:block;margin-top:24px">새 메일 제목</label><div class="form-row" style="margin-top:8px"><input id="newmail-subj" required placeholder="예: 〔Project N_CX〕2차 견적 요청"><button class="primary" id="classify-btn" style="white-space:nowrap">분류하기</button></div></form><div id="classify-result" role="status" aria-live="polite" class="diff">제목을 입력하면 분류 결과를 확인할 수 있습니다.</div><p class="helper">분류 미리보기입니다. 실제 수신·저장은 상단의 새 메일 수신을 사용하세요.</p></div></section>
 </div>
 <aside class="assistant" aria-label="AI 어시스턴트"><div class="assistant-head"><div class="assistant-title"><span class="spark">{{ icon('spark') }}</span><h2>AI 어시스턴트</h2><span class="badge" style="margin-left:auto">문서 기반</span></div><p>메일 너머, 문서 속 정확한 답까지.</p></div><div class="assistant-body"><div class="assistant-intro"><strong>어떤 업무를 찾고 계세요?</strong><p>기억나는 단서만 알려주세요.<br>관련 문서와 답변의 근거를 함께 찾아드립니다.</p></div><div class="eyebrow">이렇게 물어보세요</div><div class="suggestions"><button data-question="최근 메일 요약해봐">최근 메일, 핵심만 요약해줘 <span>↗</span></button><button data-question="N_CX 외주 견적 최종 얼마였지?">N_CX 외주 견적 최종 얼마였지? <span>↗</span></button><button data-question="워크숍 버스 몇 시 어디서?">워크숍 버스 몇 시, 어디서 타지? <span>↗</span></button></div><form id="ask-form" class="ask-form"><input id="q" required aria-label="AI에게 질문" placeholder="메일과 문서에 대해 물어보세요" autocomplete="off"><button id="ask-btn" class="primary" aria-label="질문 보내기">↑</button></form><p class="helper">Enter로 질문 · 답변과 문서 근거를 함께 확인</p><div id="answer" class="answer" role="status" aria-live="polite"></div></div></aside>
 </div><footer><span>Mail Agent · 메일은 통으로, 일은 건으로.</span><span>가상 메일 데이터 기반 PoC</span></footer>
 </main></div>
 <dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-head"><div><p class="eyebrow">업무 타임라인</p><h2 id="detail-title"></h2></div><button id="close-dialog" aria-label="타임라인 닫기">✕</button></div><div id="detail-content" class="dialog-body"></div></dialog>
 <dialog id="answer-dialog" aria-labelledby="answer-dialog-title"><div class="dialog-head"><div><p class="eyebrow">AI ASSISTANT</p><h2 id="answer-dialog-title">답변 자세히 보기</h2></div><button id="close-answer-dialog" aria-label="답변 자세히 보기 닫기">✕</button></div><div class="dialog-body" id="answer-dialog-body"></div></dialog>
+<script id="mailbox-cards" type="application/json">{{ cards|tojson }}</script>
+<script id="inbound-event" type="application/json">{{ latest_event|tojson }}</script>
 <script>
 const byId=id=>document.getElementById(id);
 const titles={case:'업무 모아보기',arrival:'전체 메일',versions:'문서 버전',notifications:'알림 및 기타',classify:'새 메일 분류'};
-function setView(name){document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==name+'-view');document.querySelectorAll('[data-view]').forEach(el=>{el.classList.toggle('active',el.dataset.view===name);if(el.dataset.view===name)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});byId('breadcrumb').textContent=titles[name];byId('section-title').textContent=titles[name];['arrival','case'].forEach(v=>{byId('btn-'+v).classList.toggle('active',name===v);byId('btn-'+v).setAttribute('aria-pressed',String(name===v))});}
+let currentView='case';
+function setView(name){currentView=name;document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==name+'-view');document.querySelectorAll('[data-view]').forEach(el=>{el.classList.toggle('active',el.dataset.view===name);if(el.dataset.view===name)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});byId('breadcrumb').textContent=titles[name];byId('section-title').textContent=titles[name];['arrival','case'].forEach(v=>{byId('btn-'+v).classList.toggle('active',name===v);byId('btn-'+v).setAttribute('aria-pressed',String(name===v))});}
 document.querySelectorAll('[data-view]').forEach(el=>el.onclick=()=>setView(el.dataset.view));byId('btn-arrival').onclick=()=>setView('arrival');byId('btn-case').onclick=()=>setView('case');
-byId('mail-search').oninput=e=>{const query=e.target.value.trim().toLocaleLowerCase();let count=0;document.querySelectorAll('.mail-row').forEach(row=>{row.hidden=!row.dataset.subject.toLocaleLowerCase().includes(query);if(!row.hidden)count++});byId('mail-count').textContent=`${query?'검색 결과':'전체'} ${count}통`;byId('mail-empty').hidden=count>0};
+document.addEventListener('input',e=>{if(e.target.id!=='mail-search')return;const query=e.target.value.trim().toLocaleLowerCase();let count=0;document.querySelectorAll('.mail-row').forEach(row=>{row.hidden=!row.dataset.subject.toLocaleLowerCase().includes(query);if(!row.hidden)count++});byId('mail-count').textContent=`${query?'검색 결과':'전체'} ${count}통`;byId('mail-empty').hidden=count>0});
 // One mail URL works from timeline, answer, expanded answer, and a fresh page.
 function openMailFromHash(){
   if(!location.hash.startsWith('#mail-'))return;
@@ -1484,10 +1506,11 @@ function openMailFromHash(){
   }
   byId('mail-navigation-status').textContent='선택한 메일을 열었어요.';
   byId('mail-search').value='';
-  byId('mail-search').dispatchEvent(new Event('input'));
+  byId('mail-search').dispatchEvent(new Event('input',{bubbles:true}));
   document.querySelectorAll('.mail-selected').forEach(el=>el.classList.remove('mail-selected'));
   row.classList.add('mail-selected');
   row.querySelector('details').open=true;
+  if(row.dataset.new==='true')acknowledgeMail(id);
   requestAnimationFrame(()=>{
     row.querySelector('summary').focus({preventScroll:true});
     row.scrollIntoView({block:'center',behavior:'instant'});
@@ -1503,10 +1526,10 @@ document.addEventListener('click',e=>{
   else location.hash=url.hash;
 });
 window.addEventListener('hashchange',openMailFromHash);
-openMailFromHash();
-const cards={{ cards|tojson }}, filenames={{ filenames|tojson }};
+let cards=JSON.parse(byId('mailbox-cards').textContent);
+const filenames={{ filenames|tojson }};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-document.querySelectorAll('[data-detail]').forEach(btn=>btn.onclick=()=>{const c=cards[Number(btn.dataset.detail)];byId('detail-title').textContent=c.title;byId('detail-content').innerHTML='<div class="timeline">'+c.mails.map(m=>`<article class="timeline-mail"><div class="meta">${esc(m.sent_at.slice(0,10))} · ${esc(m.sender_name)}</div><h3><a class="mail-link" href="/#mail-${encodeURIComponent(m.id)}">${esc(m.subject)} <span aria-hidden="true">↗</span></a></h3><p>${esc(m.body)}</p></article>`).join('')+'</div>'+(c.attachments.length?'<h3>관련 첨부 문서</h3>'+c.attachments.map(a=>`<span class="attachment">${esc(filenames[a]||a)}</span>`).join(''):'');byId('detail-dialog').showModal()});byId('close-dialog').onclick=()=>byId('detail-dialog').close();
+document.addEventListener('click',e=>{const btn=e.target.closest('[data-detail]');if(!btn)return;const c=cards[Number(btn.dataset.detail)];byId('detail-title').textContent=c.title;byId('detail-content').innerHTML='<div class="timeline">'+c.mails.map(m=>`<article class="timeline-mail"><div class="meta">${esc(m.sent_at.slice(0,10))} · ${esc(m.sender_name)}</div><h3><a class="mail-link" href="/#mail-${encodeURIComponent(m.id)}">${esc(m.subject)} <span aria-hidden="true">↗</span></a></h3><p>${esc(m.body)}</p></article>`).join('')+'</div>'+(c.attachments.length?'<h3>관련 첨부 문서</h3>'+c.attachments.map(a=>`<span class="attachment">${esc(filenames[a]||a)}</span>`).join(''):'');byId('detail-dialog').showModal()});byId('close-dialog').onclick=()=>byId('detail-dialog').close();
 async function post(url,payload){const response=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});if(!response.ok)throw new Error('요청을 처리하지 못했습니다. 잠시 후 다시 시도해 주세요.');return response.json()}
 function renderSources(r) {
   let html = '';
@@ -1544,5 +1567,112 @@ byId('ask-form').onsubmit=async e=>{
 };
 document.querySelectorAll('[data-question]').forEach(btn=>btn.onclick=()=>{byId('q').value=btn.dataset.question;byId('ask-form').requestSubmit()});
 byId('classify-form').onsubmit=async e=>{e.preventDefault();const subject=byId('newmail-subj').value.trim();if(!subject||byId('classify-btn').disabled)return;byId('classify-btn').disabled=true;const box=byId('classify-result');box.textContent='메일의 업무 맥락을 확인하고 있습니다…';try{const r=await post('/classify',{new_mail:{id:'demo-'+Date.now(),subject,body:'추가 요청드립니다.',sender_dept:'디지털전략팀'}});if(r.error)throw new Error(r.error);const card=cards.find(c=>c.id===r.case_id);const labels={existing:'기존 업무에 연결 · '+(card?.title||r.case_id),new_case:'새로운 업무 후보로 분류했습니다.',non_case:'업무 외 알림 및 기타로 분류했습니다.'};box.textContent=labels[r.decision]||'분류 결과를 확인하지 못했습니다.'}catch(error){box.textContent=error.message}finally{byId('classify-btn').disabled=false}};
+
+let refreshingMailbox=Promise.resolve();
+function refreshMailbox(){
+  refreshingMailbox=refreshingMailbox.catch(()=>{}).then(async()=>{
+    const response=await fetch('/',{cache:'no-store'});
+    if(!response.ok)throw new Error('메일함을 새로 불러오지 못했어요. 새로고침해 주세요.');
+    const page=new DOMParser().parseFromString(await response.text(),'text/html');
+    const query=byId('mail-search').value;
+    const openIds=[...document.querySelectorAll('.mail-row details[open]')].map(d=>d.closest('.mail-row').id);
+    const selected=document.querySelector('.mail-selected')?.id;
+    const scrollTop=byId('arrival-list').scrollTop;
+    for(const selector of ['.stats','#case-view','#arrival-view','#notifications-view','#recent-received']){
+      const target=document.querySelector(selector),replacement=page.querySelector(selector);
+      target.innerHTML=replacement.innerHTML;
+      if(selector==='#recent-received')target.hidden=replacement.hidden;
+    }
+    cards=JSON.parse(page.getElementById('mailbox-cards').textContent);
+    document.querySelectorAll('.nav-item[data-view] .count').forEach(count=>{
+      const view=count.closest('[data-view]').dataset.view;
+      count.textContent=page.querySelector(`[data-view="${view}"] .count`).textContent;
+    });
+    setView(currentView);
+    byId('mail-search').value=query;
+    byId('mail-search').dispatchEvent(new Event('input',{bubbles:true}));
+    openIds.forEach(id=>{const row=byId(id);if(row)row.querySelector('details').open=true});
+    if(selected)byId(selected)?.classList.add('mail-selected');
+    byId('arrival-list').scrollTop=scrollTop;
+  });
+  return refreshingMailbox;
+}
+async function acknowledgeMail(id){
+  const row=byId('mail-'+id);
+  if(!row || row.dataset.reading==='true' || row.dataset.new!=='true')return;
+  row.dataset.reading='true';
+  try{
+    await post('/inbox/mails/'+encodeURIComponent(id)+'/read',{});
+    row.dataset.new='false';
+    await refreshMailbox();
+    if(location.hash==='#mail-'+id)openMailFromHash();
+  }catch{row.dataset.reading='false';byId('mail-navigation-status').textContent='읽음 표시를 저장하지 못했어요. 다시 열어 주세요.'}
+}
+document.addEventListener('toggle',e=>{
+  if(e.target.tagName==='DETAILS' && e.target.open){
+    const row=e.target.closest('.mail-row');
+    if(row?.dataset.new==='true')acknowledgeMail(row.id.slice(5));
+  }
+},true);
+let receiveBusy=false;
+function showReceive(event){
+  const stage=event.status;
+  const labels={received:'메일을 수신했어요. 자동 분류를 기다리고 있어요.',classifying:'메일의 맥락을 읽고 알맞은 업무를 찾고 있어요.',classified:'분류를 마쳤어요. 메일함에 저장하고 있어요.'};
+  document.querySelectorAll('[data-stage]').forEach(el=>{
+    const step=el.dataset.stage;
+    const done=stage==='saved'||(step==='received' && stage!=='failed')||(step==='classifying' && stage==='classified');
+    el.classList.toggle('done',done);
+    el.classList.toggle('active',step===stage || (step==='classifying' && stage==='classified'));
+  });
+  if(stage==='saved'){
+    const kind={existing:'기존 업무에 연결',new_case:'새 업무 생성',non_case:'알림으로 분류'}[event.decision];
+    byId('receive-result').innerHTML=`<strong>저장 완료</strong> · ${esc(kind)} → ${esc(event.destination)}<br><a class="mail-link" href="${esc(event.mail_url)}">${esc(event.mail.subject)} ↗</a>`;
+  }else if(stage==='failed')byId('receive-result').textContent=event.error;
+  else byId('receive-result').textContent=labels[stage]||'수신 상태를 확인하고 있어요.';
+}
+async function followReceive(event){
+  let latest=event;
+  for(let attempt=0;attempt<120;attempt++){
+    showReceive(latest);
+    if(latest.status==='saved'){
+      await refreshMailbox();
+      sessionStorage.removeItem('mail-agent-pending-receive');
+      return;
+    }
+    if(latest.status==='failed'){
+      sessionStorage.removeItem('mail-agent-pending-receive');
+      return;
+    }
+    await new Promise(resolve=>setTimeout(resolve,750));
+    const response=await fetch('/inbox/events/'+latest.id,{cache:'no-store'});
+    if(!response.ok)throw new Error('수신 상태를 확인하지 못했어요. 같은 이벤트로 다시 확인해 주세요.');
+    latest=await response.json();
+  }
+  throw new Error('분류가 진행 중이에요. 수신 상태 다시 확인을 눌러 주세요.');
+}
+async function receiveMail(resume=false){
+  if(receiveBusy)return;
+  receiveBusy=true;
+  byId('receive-btn').disabled=true;
+  byId('receive-scenario').disabled=true;
+  try{
+    let pending;
+    try{pending=JSON.parse(sessionStorage.getItem('mail-agent-pending-receive'))}catch{}
+    if(!pending){pending={event_id:crypto.randomUUID(),scenario:byId('receive-scenario').value};sessionStorage.setItem('mail-agent-pending-receive',JSON.stringify(pending))}
+    byId('receive-result').textContent=resume?'진행 중인 수신 상태를 이어서 확인하고 있어요.':'새 메일을 수신하고 있어요.';
+    const event=await post('/inbox/receive',pending);
+    await followReceive(event);
+  }catch(error){byId('receive-result').textContent=error.message}
+  finally{
+    receiveBusy=false;byId('receive-btn').disabled=false;byId('receive-scenario').disabled=false;
+    byId('receive-btn').textContent=sessionStorage.getItem('mail-agent-pending-receive')?'수신 상태 다시 확인':'새 메일 수신';
+  }
+}
+byId('receive-btn').onclick=()=>receiveMail();
+const initialInbound=JSON.parse(byId('inbound-event').textContent);
+if(initialInbound)showReceive(initialInbound);
+if(sessionStorage.getItem('mail-agent-pending-receive'))receiveMail(true);
+openMailFromHash();
+
 </script>
 </body></html>
