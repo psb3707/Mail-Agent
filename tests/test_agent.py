@@ -59,10 +59,16 @@ def test_conversation_context_tracks_turns():
 
 
 def test_manager_agent_with_llm_pick_tool_uses_llm():
-    """LLM 스텁이 도구를 반환하면 그 도구를 따른다 (라이브 기본 원칙)."""
-    agent = ManagerAgent(llm_call=lambda prompt, **kw: "attachment_text")
+    """LLM 스텁이 JSON 도구 호출을 반환하면 그 도구를 따른다 (라이브 기본 원칙).
+
+    지시-010 리팩터: LLM은 도구 이름 대신 JSON 규약
+    `{"tool": "...", "arguments": {...}}`을 반환해야 한다.
+    """
+    agent = ManagerAgent(
+        llm_call=lambda prompt, **kw: '{"tool": "get_attachment_text", "arguments": {"attachment_id": "a001"}}'
+    )
     answer = agent.run("아무 말이나 해")
-    assert "첨부 내용" in answer  # LLM이 attachment_text 선택
+    assert "첨부" in answer  # LLM이 get_attachment_text 선택
 
 
 def test_render_tool_result_shapes():
