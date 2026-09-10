@@ -40,10 +40,11 @@ async def index(request: Request):
     non_cases = state["indexed"].get("non_cases", [])
     alerts = [n for n in non_cases if n.get("type") == "alert"]
     misc = [n for n in non_cases if n.get("type") != "alert"]
+    # starlette 1.6.0 신형 시그니처: TemplateResponse(request, name, context)
     return templates.TemplateResponse(
+        request,
         "index.html",
         {
-            "request": request,
             "cards": cards,
             "version_rows": version_rows,
             "alerts": alerts,
