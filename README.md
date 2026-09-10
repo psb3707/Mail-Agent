@@ -27,6 +27,19 @@ copy .env.example .env                  # 2. .env 열어 OPENROUTER_API_KEY 입�
 
 - `.env`에 키를 넣으면 라이브 LLM 호출, 비워 두면 캐시 폴백으로 동작합니다.
 
+## Render 배포 (GitHub 자동 배포, 무료 티어)
+
+> 발표는 다른 PC에서 진행되므로 로컬 실행 대신 Render에 올려 브라우저로 접속한다.
+
+```bash
+# 1. 이 레포를 GitHub에 올린 뒤, Render 대시보드에서 New → Blueprint로 render.yaml 선택 (또는 Blueprint sync)
+# 2. Render 대시보드 → Environment에서 OPENROUTER_API_KEY 설정 (레포에는 키를 절대 커밋하지 않음)
+# 3. 배포 완료 후 발표 PC에서 https://<service-name>.onrender.com/ 접속
+```
+
+- 키를 설정하면 라이브 LLM 호출, 미설정이면 캐시 폴백으로 동작합니다 (동일 URL, 동작만 다름).
+- 상세 절차·환경변수·콜드 스타트(keep-alive) 대응은 `docs/RENDER_DEPLOY.md` 참조.
+
 ## 데이터 재생성
 
 ```bash

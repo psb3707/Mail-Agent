@@ -1,0 +1,31 @@
+# mail-agent — Docker 빌드 제외 목록 (지시-019)
+# 로컬·민감 파일을 이미지에서 제외한다 (빌드 컨텍스트 경량화 + API 키 보안)
+
+# 로컬 개발/실행 파일
+.venv/
+*.pyc
+__pycache__/
+.pytest_cache/
+*.egg-info/
+
+# 민감 정보 (키·환경변수 — 커밋 금지 대상)
+.env
+*.env
+*.env.*
+!*.env.example
+
+# PM 운영 파일 (레포에 있지만 이미지 불필요)
+PM/
+
+# 버전 관리
+.git/
+.gitignore
+.github/
+
+# 문서·발표 자산 (이미지에 불필요)
+docs/
+slides/
+
+# 테스트
+tests/
+qa_smoke_check.py

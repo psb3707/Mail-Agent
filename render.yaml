@@ -1,0 +1,18 @@
+# mail-agent — Render Blueprint (지시-019)
+# Render Free + GitHub 자동 배포를 위한 선언. 수동 대시보드 설정 없이 sync 가능.
+# 참조: https://render.com/docs/blueprint-spec
+
+services:
+  - name: mail-agent
+    type: web
+    runtime: docker          # Dockerfile 기반 빌드 (python:3.13-slim)
+    plan: free               # Render Free (0.1 CPU / 512MB — 콜드 스타트 대응 keep-alive 필요)
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /       # GET / 200 확인 (Free 티어 수명 유지)
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false          # Render 대시보드에서 직접 설정 (레포 커밋 금지)
+      - key: OPENROUTER_MODEL
+        value: anthropic/claude-sonnet-4-5
