@@ -49,7 +49,10 @@ class ManagerAgent:
     def run_result(self, message: str) -> dict:
         """Structured answer metadata for the web app; context is request-local."""
         answer = self.run(message)
-        return {"attachment": None, "evidence": [], "mail_ids": [],
+        source_ids = [m["id"] for step in self.context.steps_history()
+                      if step["tool"] == "get_case_emails" and isinstance(step["result"], list)
+                      for m in step["result"] if isinstance(m, dict) and "id" in m]
+        return {"attachment": None, "evidence": [], "mail_ids": source_ids,
                 "cached": False,
                 "fallback": self.orchestrator.used_fallback and not bool(self.orchestrator.response),
                 **self.orchestrator.response, "answer": answer}

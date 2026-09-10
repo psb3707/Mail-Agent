@@ -1415,6 +1415,9 @@ footer  {
 .answer-error{border-left:3px solid var(--warning);padding:16px;background:var(--warning-bg);border-radius:8px;font-size:14px}
 @media(max-width:650px){ #answer-dialog .dialog-body{padding:24px}.answer-toolbar{flex-wrap:wrap}}
 
+.mail-link{color:var(--primary);font-weight:600;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.mail-link:hover{color:var(--hover)}
+.mail-row.mail-selected{background:var(--tint);border-radius:8px;outline:2px solid var(--primary);outline-offset:-2px;scroll-margin:16px}
 </style>
 </head>
 <body>
@@ -1451,7 +1454,7 @@ footer  {
 <article class="card"><div class="card-top"><span class="folder-icon">{{ icon('folder') }}</span><span class="badge">{{ card.mail_type or '업무' }}</span></div><h3>{{ card.title }}</h3><p class="meta">{{ card.period[0][:10] if card.period else '' }} — {{ card.period[1][:10] if card.period else '' }}</p><div class="latest"><div class="latest-label"><span>최근 대화 · {{ card.latest_sender.split(" / ")[0] }}</span><span class="muted">{{ card.latest_at[5:10] if card.latest_at else '' }}</span></div><p class="latest-body">{{ card.latest_body or '아직 대화가 없습니다.' }}</p></div><div class="card-footer"><span>메일 {{ card.mails|length }} · 첨부 {{ card.attachments|length }}</span><button class="text-btn" data-detail="{{ loop.index0 }}" aria-label="{{ card.title }} 타임라인 보기">타임라인 보기 ↗</button></div></article>
 {% else %}<div class="empty">연결된 업무가 없습니다.</div>{% endfor %}
 </div></section>
-<section id="arrival-view" class="view" hidden><p class="section-note">도착한 순서대로 보는 전체 메일입니다. 제목으로 검색할 수 있습니다.</p><div class="panel"><label class="searchbar" style="display:block"><input id="mail-search" placeholder="메일 제목 검색 · 예: N_CX, 견적" aria-label="메일 제목 검색"></label><p id="mail-count" class="meta" role="status">전체 {{ mails|length }}통</p><div class="mail-list" id="arrival-list">{% for m in mails %}<article class="mail-row" data-subject="{{ m.subject }}"><span class="mail-avatar">{{ m.sender_name[:1] }}</span><span>{{ m.sender_name }}<br><small>{{ m.sender_dept }}</small></span><details><summary class="mail-subject">{{ m.subject }}</summary><p class="mail-body">{{ m.body }}</p>{% for aid in m.attachments %}<span class="attachment">{{ filenames.get(aid,aid) }}</span>{% endfor %}</details><small>{{ m.sent_at[5:10] }}</small></article>{% endfor %}</div><p id="mail-empty" class="empty" hidden>일치하는 제목이 없습니다. 다른 검색어를 입력해 주세요.</p></div></section>
+<section id="arrival-view" class="view" hidden><p class="section-note">도착한 순서대로 보는 전체 메일입니다. 제목으로 검색할 수 있습니다.</p><div class="panel"><label class="searchbar" style="display:block"><input id="mail-search" placeholder="메일 제목 검색 · 예: N_CX, 견적" aria-label="메일 제목 검색"></label><p id="mail-navigation-status" class="helper" role="status"></p><p id="mail-count" class="meta" role="status">전체 {{ mails|length }}통</p><div class="mail-list" id="arrival-list">{% for m in mails %}<article class="mail-row" id="mail-{{ m.id }}" data-subject="{{ m.subject }}"><span class="mail-avatar">{{ m.sender_name[:1] }}</span><span>{{ m.sender_name }}<br><small>{{ m.sender_dept }}</small></span><details><summary class="mail-subject">{{ m.subject }}</summary><p class="mail-body">{{ m.body }}</p>{% for aid in m.attachments %}<span class="attachment">{{ filenames.get(aid,aid) }}</span>{% endfor %}</details><small>{{ m.sent_at[5:10] }}</small></article>{% endfor %}</div><p id="mail-empty" class="empty" hidden>일치하는 제목이 없습니다. 다른 검색어를 입력해 주세요.</p></div></section>
 <section id="versions-view" class="view" hidden><p class="section-note">같은 문서의 버전을 모으고, 최신본과 변경 내용을 확인합니다.</p>{% for v in version_rows %}<article class="panel"><span class="badge green">최신본 확인</span><h2 style="margin-top:12px">{{ v.doc }}</h2><div class="version-files">{% for aid in v.ids %}<div class="version-file {{ 'latest-file' if aid == v.latest else '' }}">{{ icon('file') }} <span class="badge {{ 'green' if aid == v.latest else '' }}">{{ '최신 버전' if aid == v.latest else '이전 버전' }}</span><p>{{ filenames.get(aid,aid) }}</p></div>{% endfor %}</div><h3 style="margin-bottom:12px">달라진 내용</h3><div class="diff">{{ v.diff_summary }}</div>{% if v.evidence %}<details style="margin-top:16px"><summary>문서 내용 근거 펼치기</summary>{% for e in v.evidence %}<div class="evidence" style="white-space:pre-wrap">{{ e }}</div>{% endfor %}</details>{% endif %}</article>{% else %}<div class="panel empty">비교할 문서 버전이 없습니다.</div>{% endfor %}</section>
 <section id="notifications-view" class="view" hidden><p class="section-note">업무와 별도로 확인할 반복 알림과 공지입니다.</p>{% for label, items in [('반복 알림', alerts), ('기타 공지 및 행정', misc)] %}<div class="panel"><details><summary><strong>{{ label }}</strong> <span class="badge">{{ items|length }}통</span></summary><div class="mail-list">{% for item in items %}<div style="padding:12px 0;border-bottom:1px solid var(--line)">{{ item.subject }}</div>{% else %}<p class="empty">항목이 없습니다.</p>{% endfor %}</div></details></div>{% endfor %}</section>
 <section id="classify-view" class="view" hidden><p class="section-note">새 메일이 어느 업무로 연결되는지 확인해 보세요.</p><div class="panel"><span class="folder-icon">{{ icon('spark') }}</span><h2 style="margin-top:16px">새로운 메일도, 알맞은 업무로.</h2><p class="muted" style="margin-top:8px">기존 업무에 연결하거나, 새 업무 또는 알림으로 분류합니다.</p><form id="classify-form"><label for="newmail-subj" style="display:block;margin-top:24px">새 메일 제목</label><div class="form-row" style="margin-top:8px"><input id="newmail-subj" required placeholder="예: 〔Project N_CX〕2차 견적 요청"><button class="primary" id="classify-btn" style="white-space:nowrap">분류하기</button></div></form><div id="classify-result" role="status" aria-live="polite" class="diff">제목을 입력하면 분류 결과를 확인할 수 있습니다.</div><p class="helper">시연 입력은 현재 서버 세션에만 보관됩니다.</p></div></section>
@@ -1467,14 +1470,48 @@ const titles={case:'업무 모아보기',arrival:'전체 메일',versions:'문�
 function setView(name){document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==name+'-view');document.querySelectorAll('[data-view]').forEach(el=>{el.classList.toggle('active',el.dataset.view===name);if(el.dataset.view===name)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});byId('breadcrumb').textContent=titles[name];byId('section-title').textContent=titles[name];['arrival','case'].forEach(v=>{byId('btn-'+v).classList.toggle('active',name===v);byId('btn-'+v).setAttribute('aria-pressed',String(name===v))});}
 document.querySelectorAll('[data-view]').forEach(el=>el.onclick=()=>setView(el.dataset.view));byId('btn-arrival').onclick=()=>setView('arrival');byId('btn-case').onclick=()=>setView('case');
 byId('mail-search').oninput=e=>{const query=e.target.value.trim().toLocaleLowerCase();let count=0;document.querySelectorAll('.mail-row').forEach(row=>{row.hidden=!row.dataset.subject.toLocaleLowerCase().includes(query);if(!row.hidden)count++});byId('mail-count').textContent=`${query?'검색 결과':'전체'} ${count}통`;byId('mail-empty').hidden=count>0};
+// One mail URL works from timeline, answer, expanded answer, and a fresh page.
+function openMailFromHash(){
+  if(!location.hash.startsWith('#mail-'))return;
+  let id;
+  try{id=decodeURIComponent(location.hash.slice(6))}catch{return}
+  const row=byId('mail-'+id);
+  document.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());
+  setView('arrival');
+  if(!row || !row.classList.contains('mail-row')){
+    byId('mail-navigation-status').textContent='이 메일을 찾을 수 없어요. 전체 메일에서 다시 확인해 주세요.';
+    return;
+  }
+  byId('mail-navigation-status').textContent='선택한 메일을 열었어요.';
+  byId('mail-search').value='';
+  byId('mail-search').dispatchEvent(new Event('input'));
+  document.querySelectorAll('.mail-selected').forEach(el=>el.classList.remove('mail-selected'));
+  row.classList.add('mail-selected');
+  row.querySelector('details').open=true;
+  requestAnimationFrame(()=>{
+    row.querySelector('summary').focus({preventScroll:true});
+    row.scrollIntoView({block:'center',behavior:'instant'});
+  });
+}
+document.addEventListener('click',e=>{
+  const link=e.target.closest('a[href]');
+  if(!link || e.button!==0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey)return;
+  const url=new URL(link.href,location.href);
+  if(url.origin!==location.origin || url.pathname!=='/' || !url.hash.startsWith('#mail-'))return;
+  e.preventDefault();
+  if(location.hash===url.hash)openMailFromHash();
+  else location.hash=url.hash;
+});
+window.addEventListener('hashchange',openMailFromHash);
+openMailFromHash();
 const cards={{ cards|tojson }}, filenames={{ filenames|tojson }};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-document.querySelectorAll('[data-detail]').forEach(btn=>btn.onclick=()=>{const c=cards[Number(btn.dataset.detail)];byId('detail-title').textContent=c.title;byId('detail-content').innerHTML='<div class="timeline">'+c.mails.map(m=>`<article class="timeline-mail"><div class="meta">${esc(m.sent_at.slice(0,10))} · ${esc(m.sender_name)}</div><h3>${esc(m.subject)}</h3><p>${esc(m.body)}</p></article>`).join('')+'</div>'+(c.attachments.length?'<h3>관련 첨부 문서</h3>'+c.attachments.map(a=>`<span class="attachment">${esc(filenames[a]||a)}</span>`).join(''):'');byId('detail-dialog').showModal()});byId('close-dialog').onclick=()=>byId('detail-dialog').close();
+document.querySelectorAll('[data-detail]').forEach(btn=>btn.onclick=()=>{const c=cards[Number(btn.dataset.detail)];byId('detail-title').textContent=c.title;byId('detail-content').innerHTML='<div class="timeline">'+c.mails.map(m=>`<article class="timeline-mail"><div class="meta">${esc(m.sent_at.slice(0,10))} · ${esc(m.sender_name)}</div><h3><a class="mail-link" href="/#mail-${encodeURIComponent(m.id)}">${esc(m.subject)} <span aria-hidden="true">↗</span></a></h3><p>${esc(m.body)}</p></article>`).join('')+'</div>'+(c.attachments.length?'<h3>관련 첨부 문서</h3>'+c.attachments.map(a=>`<span class="attachment">${esc(filenames[a]||a)}</span>`).join(''):'');byId('detail-dialog').showModal()});byId('close-dialog').onclick=()=>byId('detail-dialog').close();
 async function post(url,payload){const response=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});if(!response.ok)throw new Error('요청을 처리하지 못했습니다. 잠시 후 다시 시도해 주세요.');return response.json()}
 function renderSources(r) {
   let html = '';
   if(r.attachment) html += `<div class="source-file"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>${esc(filenames[r.attachment]||r.attachment)}<small>답변에 사용한 첨부 문서</small></span></div>`;
-  if(r.sources?.length) html += `<details class="source-details"><summary>참고한 메일 ${r.sources.length}통 펼쳐보기</summary>${r.sources.map(m=>`<article class="source-excerpt"><span class="meta">${esc(m.date)} · ${esc(m.sender)}</span><strong>${esc(m.subject)}</strong><p>${esc(m.excerpt)}</p></article>`).join('')}</details>`;
+  if(r.sources?.length) html += `<details class="source-details"><summary>참고한 메일 ${r.sources.length}통 펼쳐보기</summary>${r.sources.map(m=>`<article class="source-excerpt"><span class="meta">${esc(m.date)} · ${esc(m.sender)}</span><a class="mail-link" href="${esc(m.url)}">${esc(m.subject)} <span aria-hidden="true">↗</span></a><p>${esc(m.excerpt)}</p></article>`).join('')}</details>`;
   if(r.evidence?.length) html += `<details class="source-details"><summary>문서 원문 근거 ${r.evidence.length}개 펼쳐보기</summary>${r.evidence.map(e=>`<blockquote class="source-excerpt">${esc(e)}</blockquote>`).join('')}</details>`;
   return html ? `<section class="answer-source"><div class="source-label">${r.kind==='mail_summary'?'참고한 메일':'답변의 출처'}</div>${html}</section>` : '';
 }

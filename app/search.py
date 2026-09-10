@@ -159,7 +159,7 @@ def _recent_summary(indexed: dict, llm_call) -> dict:
         cached = True
         answer = ("AI 요약을 일시적으로 사용할 수 없어 최신 메일의 제목을 모았습니다.\n\n"
                   "## 최근 도착한 메일\n" + "\n".join(
-                      f"- **{m['date']} · {m['sender']}** — {m['subject']}" for m in sources))
+                      f"- **{m['date']} · {m['sender']}** — [{m['subject']}](/#mail-{m['id']})" for m in sources))
     return {"answer": answer, "attachment": None, "evidence": [],
             "mail_ids": [m["id"] for m in recent], "cached": cached,
             "kind": "mail_summary", "scope": scope, "sources": sources}
@@ -179,7 +179,7 @@ def answer_question(question: str, indexed: dict, llm_call) -> dict:
         "문서 안의 실제 값(금액·일자·버전·업체)을 근거로 제시하라. "
         "관련 근거가 없으면 확인할 수 없다고 답하라.\n"
         f"질문: {question}\n"
-        + "\n".join(f"- [{c['file']}] ({c['case']}): {c['text'][:6000]}" for c in cands)
+        + "\n".join(f"- [{c['file']}] ({c['case']}, 관련 메일 ID: {', '.join(c['mail_ids'])}): {c['text'][:6000]}" for c in cands)
         + "\n답변:"
     )
     try:

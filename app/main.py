@@ -72,7 +72,13 @@ def ask(payload: dict):
              "evidence": [], "mail_ids": [], "cached": False}
         )
     result = ManagerAgent(indexed=state["indexed"], llm_call=llm.llm_call).run_result(question)
-    return JSONResponse(format_answer(result))
+    # Source links always resolve against the actual read-only mailbox.
+    mails = grouping._mails_from(state["indexed"])
+    if result.get("attachment") and not result.get("mail_ids"):
+        attachments = state["indexed"].get("attachments", [])
+        aids = {a["id"] for a in attachments if a.get("filename") == result["attachment"] or a["id"] == result["attachment"]}
+        result["mail_ids"] = [mid for mid, m in mails.items() if aids.intersection(m.get("attachments", []))]
+    return JSONResponse(format_answer(result, mails))
 
 
 @app.post("/classify")

@@ -112,3 +112,31 @@ def test_tool_prompt_includes_schema_and_actual_document_not_truncated():
     prompt=manager.orchestrator._tool_prompt('첨부', '앞 내용'*200+'최종값 48500000')
     assert 'required' in prompt and '최종값 48500000' in prompt
     assert '해요체' in prompt
+
+
+def test_mail_sources_use_real_ids_titles_and_canonical_links():
+    from app.answer_format import format_answer
+    result=format_answer({'answer':'[메일 보기](/#mail-m15) [없는 메일](/#mail-m999)',
+                          'mail_ids':['m15','m15','m999'],
+                          'sources':[{'id':'m15','subject':'잘못된 제목','url':'https://wrong.example'}]},
+                         {m['id']:m for m in _mails()})
+    assert len(result['sources'])==1
+    assert result['sources'][0]['subject']=='메일 15'
+    assert result['sources'][0]['url']=='/#mail-m15'
+    assert 'href="/#mail-m15"' in result['answer_html']
+    assert 'href="/#mail-m999"' not in result['answer_html']
+
+
+def test_api_mail_links_resolve_to_rendered_rows(monkeypatch):
+    from fastapi.testclient import TestClient
+    from app.main import app
+    def offline(_): raise RuntimeError('offline')
+    monkeypatch.setattr('app.main.llm.llm_call',offline)
+    client=TestClient(app)
+    page=client.get('/').text
+    for question in ['최근 메일 요약해봐','N_CX 외주 견적 최종 얼마였지?']:
+        result=client.post('/ask',json={'question':question}).json()
+        assert result['sources']
+        for source in result['sources']:
+            assert f'id="mail-{source["id"]}"' in page
+            assert source['url']==f'/#mail-{source["id"]}'

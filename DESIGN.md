@@ -169,3 +169,6 @@ button-primary와 button-hover는 주요 제출 동작. card는 제목, 기간, 
 
 ## Agent Prompt Guide
 canvas 배경 위에 surface 카드, ink 제목, muted 메타데이터를 배치한다. primary는 선택과 제출에만 사용한다. body와 caption의 구분을 유지한다. 건 단위 카드, 도착순 검색, 문서 버전, 알림, 신규 분류, AI 질문의 단일 페이지 구조를 유지한다.
+
+### 메일 링크
+타임라인 및 답변 출처의 메일 제목에는 primary 밑줄 링크를 사용한다. 링크 이동 시 전체 메일 화면에서 해당 메일을 펼치고 tint 표면과 primary 테두리로 표시한다. 링크는 /#mail-ID 형식이며 실제 메일 ID만 허용한다.
