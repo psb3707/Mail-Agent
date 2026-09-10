@@ -59,21 +59,34 @@ def parse_openrouter_response(raw: str) -> str | None:
         return None
 
 
-def call_openrouter(prompt: str, model: str | None = None) -> str:
-    """OpenRouter /chat/completions 호출. 실패 시 예외를 던진다 (호출부가 폴백)."""
+def call_openrouter(
+    prompt: str,
+    model: str | None = None,
+    max_tokens: int | None = None,
+    response_format: dict | None = None,
+) -> str:
+    """OpenRouter /chat/completions 호출. 실패 시 예외를 던진다 (호출부가 폴백).
+
+    - model: 모델 ID 재정의 (기본 OPENROUTER_MODEL/env)
+    - max_tokens: 출력 상한 (기본 1024, 분류 배치처럼 큰 응답은 호출부가 지정)
+    - response_format: {"type": "json_object"} 등 구조화 요청 (분류AI JSON 모드)
+    """
     api_key = _api_key()
     if not api_key:
         raise RuntimeError("OPENROUTER_API_KEY 미설정")
 
-    body = json.dumps({
+    body: dict = {
         "model": model or _get_model(),
         "messages": [{"role": "user", "content": prompt}],
-        "max_tokens": 1024,
-    }).encode("utf-8")
+        "max_tokens": max_tokens or 1024,
+    }
+    if response_format:
+        body["response_format"] = response_format
+    payload = json.dumps(body).encode("utf-8")
 
     req = urllib.request.Request(
         _API_URL,
-        data=body,
+        data=payload,
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
