@@ -71,12 +71,13 @@ async def classify(payload: dict):
     new_mail = payload.get("new_mail") or {}
     if not new_mail:
         return JSONResponse({"case_id": "", "error": "new_mail이 필요합니다."})
-    case_id = grouping.classify_new_mail(new_mail, state["indexed"], llm.llm_call)
+    result = grouping.classify_new_mail(new_mail, state["indexed"], llm.llm_call)
     # 시연용 인메모리 기록 (영속화 없음)
     new_mail = dict(new_mail)
-    new_mail["_assigned_case"] = case_id
+    new_mail["_assigned_case"] = result.get("case_id", "")
+    new_mail["_decision"] = result.get("decision", "")
     state["new_mails"].append(new_mail)
-    return JSONResponse({"case_id": case_id, "assigned": new_mail})
+    return JSONResponse({"decision": result.get("decision"), "case_id": result.get("case_id"), "assigned": new_mail})
 
 
 @app.get("/versions")

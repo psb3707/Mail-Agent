@@ -6,3 +6,6 @@ data/samples/
 .superpowers/
 *.egg-info/
 PM/
+
+# 로컬 검증 도구 (커밋 금지)
+.deepcode-verification/

@@ -13,55 +13,24 @@ from collections import Counter, defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
 
+from app import classify_rules  # noqa: F401 — 공유 규칙(단일 출처)
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
-# 제목의 업무 표기는 흔들리지만, 아래 값들은 동일한 업무 개체를 가리킨다.
-# 이는 건을 직접 열거하는 규칙이 아니라 표기 정규화 경계다.
-_TOPIC_PATTERNS = (
-    ("n cx", re.compile(r"\bn\s*cx\b")),
-    ("next w", re.compile(r"\bnext\s*w\b")),
-    ("d mig", re.compile(r"\bd\s*mig\b")),
-    ("esg공시", re.compile(r"esg\s*공시")),
-    ("고객채널tf", re.compile(r"고객채널\s*tf")),
-    ("경영기획", re.compile(r"경영기획")),
-    ("정보보호센터", re.compile(r"정보보호센터")),
-    ("멘토 멘티", re.compile(r"멘토\s*멘티")),
-)
-
-_STOPWORDS = {
-    "project", "관련", "공유", "안내", "요청", "확정", "문의", "드립니다",
-    "합니다", "부탁드립니다", "부탁", "확인", "첨부", "회신", "요망", "자료",
-    "회의", "일정", "보고", "공지", "업무", "참고", "전달", "검토", "결과",
-    "진행", "사항", "대한", "위한", "그리고", "협조", "메일입니다", "안내드립니다",
-    "안내입니다", "요청드립니다", "완료했습니다", "공지사항입니다", "재공지드립니다",
-    "전달드립니다", "the", "for", "and",
-}
-
 
 def _norm_subject(subject: str) -> str:
-    """말머리·대소문자·구분자와 자주 흔들리는 표기를 정규화한다."""
-    s = subject.lower()
-    s = re.sub(r"\b(?:re|fw|fwd)\s*:", " ", s)
-    s = s.replace("workshop", "워크숍").replace("워크샵", "워크숍")
-    s = re.sub(r"[〔〕\[\]()（）]", " ", s)
-    s = re.sub(r"[_\-./]", " ", s)
-    return re.sub(r"\s+", " ", s).strip()
+    """말머리·대소문자·구분자와 흔들리는 표기 정규화 — 공유 규칙 위임."""
+    return classify_rules.normalize_subject(subject)
 
 
 def _topic_marker(subject: str) -> str:
     """제목에서 표기 흔들림을 제거한 업무 개체 표지를 찾는다."""
-    normalized = _norm_subject(subject)
-    for marker, pattern in _TOPIC_PATTERNS:
-        if pattern.search(normalized):
-            return marker
-    return ""
+    return classify_rules.topic_marker(subject)
 
 
 def _tokens(text: str) -> set[str]:
-    normalized = _norm_subject(text)
-    tokens = set(re.findall(r"[a-z0-9]{2,}|[가-힣]{2,}", normalized))
-    return {token for token in tokens if token not in _STOPWORDS and not token.isdigit()}
+    return classify_rules.tokens(text)
 
 
 def _mail_time(mail: dict) -> datetime:

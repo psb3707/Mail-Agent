@@ -28,7 +28,7 @@
 | 설계 | `docs/specs/2026-09-09-mail-agent-design.md` | ✅ 설계·4장면 시나리오 |
 | 색인 파이프라인 | `scripts/build_index.py` | ✅ 9건(43통) 재조립 · 비건 357통 · 첨부 추출 · 버전 판별 |
 | 색인 테스트 | `tests/test_build_index.py` | ✅ 8/8 — 전체 건 정합성·정답 라벨 비의존·순서 무관·멱등 |
-| 재조립 | `app/grouping.py` | ✅ 재조립 + 신메일 증분 편입 (테스트 3/3 통과) |
+| 재조립 | `app/grouping.py` + `app/classify_rules.py` | ✅ 재조립 + 신메일 증분 편입 3분기(existing/new_case/non_case) · 배치와 규칙 공유 · 테스트 12/12 통과 |
 | 자연어 질의 | `app/search.py` | ✅ 후보 축소 + 근거 인용 (테스트 3/3 통과) |
 | LLM 게이트웨이 | `app/llm.py` | ✅ 라이브 호출 + 캐시 폴백 (테스트 2/2 통과) |
 | 버전 판별 | `app/versions.py` | ✅ 최신본 + 변경 근거 (테스트 4/4 통과) |

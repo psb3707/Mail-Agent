@@ -51,12 +51,14 @@ DEPTH 1 = PoC가 "검색이 안 되는 메일함 → 건 단위 레이어"로 �
 - **이어받을 때 손댈 일**: 신메일 재분류 시 `indexed.json`은 **읽기 전용**으로 유지.
 
 ### D1-2 건 재조립 에이전트 구축 — ✅ 완료 (플랜 Task 4)
-- **산출물**: `app/grouping.py` + `tests/test_grouping.py`
+- **산출물**: `app/grouping.py` + `tests/test_grouping.py` + `app/classify_rules.py`
 - **내용**: ① 사전 계산 결과를 건 카드+타임라인으로 재조립(`reassemble(indexed)`)
   ② 신메일 1통의 증분 편입 판단(`classify_new_mail(new_mail, indexed, llm_call)`) —
-  기존 건 편입 / 새 건 시작 / 비건 처리 3분기.
-- **완료 조건**: LLM 없이(토큰 폴백으로도) 신메일 배정이 결정되는 테스트 통과.
-- **의존성**: D1-1(`indexed.json`) → D1-4(llm_call).
+  **3분기 상수** 반환: `existing`(기존 건 편입) / `new_case`(새 건 후보) / `non_case`(비건).
+  분류 규칙(정규화·대표어·시간 근접·학습 캠페인)은 `app/classify_rules.py` 단일 출처로
+  배치(`scripts/build_index.py`)와 공유 — 복제 드리프트 방지. LLM 프롬프트는 건 제목뿐 아니라
+  대표어·기간 요약을 제공. 시스템 발신 알림은 LLM보다 먼저 비건 확정(라이브 LLM 오염 방지).
+- **완료 조건**: LLM 없이(토큰 폴백으로도) 신메일 배정이 결정되는 테스트 통과 + 400통 전수 감사 400/400 정합.
 
 ### D1-3 자연어 질의·근거 에이전트 구축 — ✅ 완료 (플랜 Task 2)
 - **산출물**: `app/search.py` + `tests/test_search.py`
