@@ -1,4 +1,4 @@
-"""main 푸시를 프로젝트 PM 관점에서 리뷰하고 GitHub 커밋 댓글로 전달한다.
+"""main 푸시를 프로젝트 PM 관점에서 리뷰하는 Markdown 문서를 만든다.
 
 원본 메일과 첨부는 외부 모델로 보내지 않는다. 리뷰 입력은 프로젝트 기준 문서,
 민감 경로를 제외한 Git diff, 파일 목록, 테스트 결과로 제한한다.
@@ -7,12 +7,9 @@
 from __future__ import annotations
 
 import argparse
-import json
 import os
 import subprocess
 import sys
-import urllib.error
-import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -24,7 +21,6 @@ MAX_CONTEXT_CHARS = 34_000
 MAX_DIFF_CHARS = 70_000
 MAX_TEST_CHARS = 10_000
 MAX_TREE_CHARS = 14_000
-MAX_COMMENT_CHARS = 60_000
 
 PROJECT_CONTEXT_FILES = (
     "README.md",
@@ -350,42 +346,6 @@ def generate(args: argparse.Namespace) -> int:
     return 0
 
 
-def post(args: argparse.Namespace) -> int:
-    token = os.environ.get("GITHUB_TOKEN", "").strip()
-    if not token:
-        raise RuntimeError("GITHUB_TOKEN is missing.")
-    review = (ROOT / args.review).read_text(encoding="utf-8")
-    server_url = os.environ.get("GITHUB_SERVER_URL", "https://github.com").rstrip("/")
-    run_id = os.environ.get("GITHUB_RUN_ID", "")
-    run_link = f"{server_url}/{args.repository}/actions/runs/{run_id}" if run_id else ""
-    footer = f"\n\n---\n[전체 실행 결과와 Markdown artifact 확인]({run_link})" if run_link else ""
-    body = truncate(review, MAX_COMMENT_CHARS - len(footer), "commit comment truncated") + footer
-
-    api_url = os.environ.get("GITHUB_API_URL", "https://api.github.com").rstrip("/")
-    url = f"{api_url}/repos/{args.repository}/commits/{args.sha}/comments"
-    request = urllib.request.Request(
-        url,
-        data=json.dumps({"body": body}).encode("utf-8"),
-        method="POST",
-        headers={
-            "Accept": "application/vnd.github+json",
-            "Authorization": f"Bearer {token}",
-            "X-GitHub-Api-Version": "2022-11-28",
-            "Content-Type": "application/json",
-            "User-Agent": "mail-agent-pm-review",
-        },
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            if response.status != 201:
-                raise RuntimeError(f"GitHub returned HTTP {response.status}")
-    except urllib.error.HTTPError as error:
-        detail = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Could not post commit comment: HTTP {error.code}: {detail}") from error
-    print(f"Posted PM review to {args.repository}@{args.sha}")
-    return 0
-
-
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -401,11 +361,6 @@ def build_parser() -> argparse.ArgumentParser:
     generate_parser.add_argument("--output", default="pm-review.md")
     generate_parser.set_defaults(handler=generate)
 
-    post_parser = subparsers.add_parser("post", help="Post a Markdown review as a commit comment")
-    post_parser.add_argument("--review", required=True)
-    post_parser.add_argument("--repository", required=True)
-    post_parser.add_argument("--sha", required=True)
-    post_parser.set_defaults(handler=post)
     return parser
 
 
